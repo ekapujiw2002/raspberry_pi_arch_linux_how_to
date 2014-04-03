@@ -1,4 +1,4 @@
-##KONFIGURASI JARINGAN RASPI SECARA STATIK
+#KONFIGURASI JARINGAN RASPI SECARA STATIK
 1.	Pindah ke direktori **/etc/netctl** dengan printah : `cd /etc/netctl`
 2.	Kopi file **/etc/netctl/examples/Ethernet-static** ke folder ini dgn printah : 
     `cp examples/ethernet-static eth0`
