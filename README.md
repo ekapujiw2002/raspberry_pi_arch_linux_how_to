@@ -1,4 +1,3 @@
-raspberry_pi_arch_linux_how_to
-==============================
+#RaspberryPi Arch Linux How To
 
 This is my note for the raspberry pi and arch linux
