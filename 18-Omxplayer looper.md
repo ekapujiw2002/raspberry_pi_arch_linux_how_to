@@ -3,26 +3,26 @@
 2.	Buat folder utk menyimpan script dan file multimedia yang akan di-play, misal di **~/video_looper**. Untuk file multimedia bisa dimasukkan misal dalam folder **~/video_looper/files**
 3.	Buat sebuah file FIFO di dalam folder **~/video_looper** untuk piping perintah ke omxplayer dengan perintah : `mkfifo [name]`, misal `mkfifo omx_fifo`
 4.	Di dalam folder tersebut juga buat sebuah file bash dengan nama misal **omx.sh**. Isi filenya dengan script berikut :
-```
-#!/bin/bash
-# get rid of the cursor so we don't see it when videos are running -- optional
-#setterm -cursor off
+ ```
+ #!/bin/bash
+ # get rid of the cursor so we don't see it when videos are running -- optional
+ #setterm -cursor off
 
-# set here the path to the directory containing your videos
-VIDEOPATH="/home/raspi/video_looper/files" 
+ # set here the path to the directory containing your videos
+ VIDEOPATH="/home/raspi/video_looper/files" 
 
-#set fifo file
-FIFOFILE="/home/raspi/video_looper/omx_fifo"
+ #set fifo file
+ FIFOFILE="/home/raspi/video_looper/omx_fifo"
 
-# you can normally leave this alone
-SERVICE="omxplayer"
+ # you can normally leave this alone
+ SERVICE="omxplayer"
 
-# now for our infinite loop!
-while true; do
+ # now for our infinite loop!
+ while true; do
         if ps ax | grep -v grep | grep $SERVICE > /dev/null
         then
         sleep 1;
-else
+ else
 
         #Make a newline a delimiter instead of a space
 		SAVEIFS=$IFS
@@ -48,9 +48,9 @@ else
         
         #Reset the IFS
 		IFS=$SAVEIFS
-fi
-done
-```
+ fi
+ done
+ ```
 
 5.	Tambahkan flag executable ke file shell tersebut dengan : `chmox +x omx.sh`
 6.	Untuk pengetesan jalankan file shell dengan `sudo ./omx.sh &`
