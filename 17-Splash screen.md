@@ -18,5 +18,6 @@
 > 
 > [Install]
 > WantedBy=getty.target
+
 7.	*Enable*-kan servisnya dengan : `sudo systemctl enable splash.service`
 8.	Reboot raspi dan liatlah *splash screen* Anda
