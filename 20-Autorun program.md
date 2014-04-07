@@ -16,4 +16,4 @@ Utk autorun dapat dilakukan dengan file *.bashrc, .xinitrc*, maupun sebagai *dae
  ExecStart=/scripts/my_startup_script.sh	#command here
  ```
 
-3. Install servisnya dengan : sudo systemctl enable /usr/lib/system/system/servis.service
+3. Install servisnya dengan : ```sudo systemctl enable /usr/lib/system/system/servis.service```
