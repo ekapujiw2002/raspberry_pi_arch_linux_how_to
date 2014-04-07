@@ -10,7 +10,7 @@
 6. *Reboot* raspi dan secara otomatis maka *drive* eksternal sudah di-*mount*
 
 Ref :
-http://ccollins.wordpress.com/2013/02/04/how-to-mount-usb-disks-on-linux/
-http://kwilson.me.uk/blog/force-your-raspberry-pi-to-mount-an-external-usb-drive-every-time-it-starts-up/
-http://techsaju.wordpress.com/2013/03/04/mount-usb-drive-in-archlinux-raspberry-pi/
-http://www.techjawab.com/2013/06/how-to-setup-mount-auto-mount-usb-hard.html
+ - http://ccollins.wordpress.com/2013/02/04/how-to-mount-usb-disks-on-linux/
+ - http://kwilson.me.uk/blog/force-your-raspberry-pi-to-mount-an-external-usb-drive-every-time-it-starts-up/
+ - http://techsaju.wordpress.com/2013/03/04/mount-usb-drive-in-archlinux-raspberry-pi/
+ - http://www.techjawab.com/2013/06/how-to-setup-mount-auto-mount-usb-hard.html
