@@ -3,11 +3,15 @@
 2. Install **python twython package** : `sudo pip install twython`
 3. Register *app* yang akan di-*build* di `https://apps.twitter.com/app/new`
 4. Catat **API Key** dan **API Secret** dari tab **API Keys** :
-	> API key		tZFstqoPos9EzZCXWbThR5IIs
+	> API key	tZFstqoPos9EzZCXWbThR5IIs
+
 	> API secret	LqdArL2Laevzbt9xtHDofVeAZemNoVPjN0PIWTeTZz5pgsokjx
+
 5. Catat juga **access token** dan **secret** :
 	> Access token			597422837-DI74enAEqJRgJ3D8nOqKOxj7wSQLWd20fJbnRQUG
+	
 	> Access token secret		Eyfm2GYNLMFcBKLNqcwmUE94oICYSSviRr1RaEP2b0N9T
+
 6. Buat *script python* berikut dan simpan misal *twitbot.py* :
 
 	```
