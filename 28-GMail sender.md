@@ -109,3 +109,7 @@
 
 5.	Jalankan scriptnya dengan : `./gmail.py –t ke@xxx.com –s “subject email” –m “isi pesan email” –a [nama file attachment]`
 	File attachment optional
+
+Referensi:
+- http://kutuma.blogspot.com/2007/08/sending-emails-via-gmail-with-python.html
+- http://jeremyblythe.blogspot.com/2012/06/motion-google-drive-uploader-and.html
