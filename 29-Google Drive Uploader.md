@@ -1,6 +1,6 @@
 #GOOGLE DRIVE UPLOADER
-1.	Install *python2, python2-pip, python2-setuptools, python2-gdata* : `sudo pacman –S python2 python2-pip python2-setuptools python2-gdata `
-2.	Install gdata python dengan : `sudo pip2 install gdata`
+1.	Install *python2, python2-pip, python2-setuptools, python2-gdata* : `sudo pacman –S python2 python2-pip python2-setuptools`
+2.	Install python2-gdata dengan : `sudo pacman -S python2-gdata`
 3.	Install python-magic : `sudo pip2 install python-magic`
 4.	Buat file python misal dengan nama **gdrive.py** dan isikan script sbb :
 	```
