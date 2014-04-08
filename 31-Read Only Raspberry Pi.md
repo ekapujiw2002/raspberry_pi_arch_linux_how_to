@@ -19,6 +19,7 @@
 7.	*Disable* beberapa servis ini :
 	```
 	sudo systemctl disable systemd-readahead-collect
+
 	sudo systemctl disable systemd-random-seed
 	```
 	
