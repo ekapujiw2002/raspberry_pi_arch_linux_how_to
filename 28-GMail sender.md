@@ -26,8 +26,8 @@
 	import os, sys, getopt
 	
 	#enter your gmail account and password here
-	gmail_user = "ex4.raspi@gmail.com"
-	gmail_pwd = "ex4.raspi.2014"
+	gmail_user = " "
+	gmail_pwd = " "
 	
 	#the mail sender function
 	def mail(to, subject, text, attach):
