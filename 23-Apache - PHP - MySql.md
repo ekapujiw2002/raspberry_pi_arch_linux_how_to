@@ -8,7 +8,7 @@
 6. Komentar baris berikut : `LoadModule unique_id_module modules/mod_unique_id.so`
 7. *Restart apache* : `sudo systemctl restart httpd`
 8. *Auto start http* saat *boot* dengan : `sudo systemctl enable httpd`
-9. Ketikkan ip raspi dan server sudah terinstall. Direktori web berada di **/var/www**
+9. Ketikkan ip raspi dan server sudah terinstall. Direktori web berada di **/srv/http**
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
