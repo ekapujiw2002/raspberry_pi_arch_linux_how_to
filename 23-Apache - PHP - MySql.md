@@ -1,14 +1,14 @@
 #INSTALL APACHE, MYSQL, PHP
 ##APACHE
-1. Pastikan repository lokal terupdate dgn : `sudo pacman –Syu`
-2. Install apache : `sudo pacman -S apache`
-3. Install lynx : `sudo pacman –S lynx`
-4. Install libmariadbclient : `sudo pacman -S libmariadbclient`
+1. Pastikan *repository* lokal terupdate dgn : `sudo pacman –Syu`
+2. Install *apache* : `sudo pacman -S apache`
+3. Install *lynx* : `sudo pacman –S lynx`
+4. Install *libmariadbclient* : `sudo pacman -S libmariadbclient`
 4. Edit file konfigurasinya : `sudo nano /etc/httpd/conf/httpd.conf`
 5. Komentar baris berikut : `LoadModule unique_id_module modules/mod_unique_id.so`
-6. Restart apache : `sudo systemctl restart httpd`
-7. Auto start http saat boot dengan : `sudo systemctl enable httpd`
-8.	ketikkan ip raspi dan server sudah terinstall
+6. *Restart apache* : `sudo systemctl restart httpd`
+7. *Auto start http* saat *boot* dengan : `sudo systemctl enable httpd`
+8. Ketikkan ip raspi dan server sudah terinstall
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
