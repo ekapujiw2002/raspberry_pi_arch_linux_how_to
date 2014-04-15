@@ -22,3 +22,7 @@
 
 ##INSTALL PHPMYADMIN
 1. Install phpmyadmin dan php-mcrypt dengan : `sudo pacman –S phpmyadmin php-mcrypt`
+
+
+**Reference**
+ - https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-arch-linux
