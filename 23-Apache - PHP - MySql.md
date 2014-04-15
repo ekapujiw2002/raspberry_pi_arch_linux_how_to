@@ -4,7 +4,7 @@
 2. Install *apache* : `sudo pacman -S apache`
 3. Install *lynx* : `sudo pacman –S lynx`
 4. Install *libmariadbclient* : `sudo pacman -S libmariadbclient`
-5. Edit file konfigurasinya : `sudo nano /etc/httpd/conf/httpd.conf`
+5. Edit file konfigurasinya : `sudo nano /etc/httpd/conf/httpd.conf`. Untuk optimaliasi server maka matikan fungsi *logging* dengan mengubah **ErrorLog** menjadi `ErrorLog "/dev/null"` dan komentar semua direktiv **CustomLog**
 6. Komentar baris berikut : `LoadModule unique_id_module modules/mod_unique_id.so`
 7. *Restart apache* : `sudo systemctl restart httpd`
 8. *Auto start http* saat *boot* dengan : `sudo systemctl enable httpd`
