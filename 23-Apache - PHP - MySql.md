@@ -10,6 +10,18 @@
 8. *Auto start http* saat *boot* dengan : `sudo systemctl enable httpd`
 9. Ketikkan ip raspi dan server sudah terinstall. Direktori web berada di **/srv/http**
 
+##PHP
+1. Install php dengan `sudo pacman -S php php-apache`
+2. Edit file **/etc/httpd/conf/httpd.conf** dan tambahkan :
+ ```
+ LoadModule php5_module modules/libphp5.so
+ Include conf/extra/php5_module.conf
+ ```
+3. Ganti mpm_event dengan mpm_prefork pada file yang sama dengan mengomentari `LoadModule mpm_event_module modules/mod_mpm_event.so` dan ganti dengan `LoadModule mpm_prefork_module modules/mod_mpm_prefork.so`
+4. Edit file **/etc/httpd/conf/mime.types** dan tambahkan `application/x-httpd-php       php    php5`
+5. Buat sebuah file php di folder **/srv/http/** dan isi dengan : `<?php phpinfo(); ?>`
+6. Restart service httpd dengan `sudo systemctl restart httpd` dan buka file php di atas di browser
+
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
 2. Start mysql server dengan : `sudo systemctl start mysqld`
@@ -26,3 +38,6 @@
 
 **Reference**
  - https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-arch-linux
+ - https://wiki.archlinux.org/index.php/LAMP
+ - http://kiros.co.uk/blog/installing-lamp-linuxapachemysqlphp-on-the-raspberry-pi/
+ - http://www.adminempire.com/how-to-install-lamp-stack-on-arch-linux/
