@@ -39,7 +39,9 @@
  grant create on *.* to raspi;
  quit
  ```
-8. Restart mysql server dengan : `sudo systemctl restart mysqld`
+8. Tambahkan `skip-name-resolve` ke **/etc/my.cnf** untuk mem-*bypass* pencarian dns.
+9. Matikan logging mysql dengan memberikan tanda # di depan semua parameter log
+9. Restart mysql server dengan : `sudo systemctl restart mysqld`
 
 ##INSTALL PHPMYADMIN
 1. Install phpmyadmin dan php-mcrypt dengan : `sudo pacman –S phpmyadmin php-mcrypt`
@@ -50,3 +52,6 @@
  - https://wiki.archlinux.org/index.php/LAMP
  - http://kiros.co.uk/blog/installing-lamp-linuxapachemysqlphp-on-the-raspberry-pi/
  - http://www.adminempire.com/how-to-install-lamp-stack-on-arch-linux/
+ - http://www.cyberciti.biz/faq/what-is-mysql-binary-log/
+ - http://www.pontikis.net/blog/how-and-when-to-enable-mysql-logs
+ - http://www.wunderkraut.com/blog/lean-local-mysql-turn-off-binary-logs/2013-09-26
