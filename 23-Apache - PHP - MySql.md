@@ -27,10 +27,19 @@
 2. Start mysql server dengan : `sudo systemctl start mysqld`
 3. Jika mysql server tidak dapat dijalankan, maka edit file **/etc/mysql/my.cnf** dan hilangkan tanda # di depan smua innodb. Lalu delete file **/var/lib/mysql/ibdata1**
 4.	Ubah default ke myisam dengan menambahkan opsi berikut ke **my.cnf** :
-
 	> ignore-builtin-innodb
+
 	> default-storage-engine = myisam
+
 5.	Amankan instalasi dengan : `sudo mysql_secure_installation`
+6. Login ke server mysql sebagai root dengan `mysql -u root -p` . Masukkan passwod root pada langkah sebelumnya.
+7. buat user baru misal raspi dengan password raspi menggunakan :
+ ```
+ create user 'raspi'@'%' identified by 'raspi';
+ grant create on *.* to raspi;
+ quit
+ ```
+8. Restart mysql server dengan : `sudo systemctl restart mysqld`
 
 ##INSTALL PHPMYADMIN
 1. Install phpmyadmin dan php-mcrypt dengan : `sudo pacman –S phpmyadmin php-mcrypt`
