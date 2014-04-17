@@ -23,3 +23,9 @@ Jika cara di atas tidak berhasil maka lakukan cara berikut ini :
 4. Jalankan dhcpsrv.exe. Install servisnya dan start.
 5. Koneksikan Raspberry Pi ke PC via kabel LAN straight atau cross. Ping IP misal **192.168.1.100** dari PC dan seharusnya ada jawaban dari Raspberry Pi.
 6. Raspi sudah siap untuk diproses lebih lanjut.
+
+Referensi :
+- http://www.instructables.com/id/Direct-Network-Connection-between-Windows-PC-and-R/
+- http://nextproject.ca/seek/tutorials/index.php?title=Raspberry_Pi_ssh
+- http://pihw.wordpress.com/guides/direct-network-connection/in-a-nut-shell-direct-network-connection/
+- http://www.youtube.com/watch?v=hnSLtgHIIM8
