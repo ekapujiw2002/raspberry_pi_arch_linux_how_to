@@ -8,5 +8,5 @@ Install all of the development tools and programs we need with :
 Install also **wiringpi** for hardware programming :
     `sudo pacman –S wiringpi`    
 And also **OpenCV** for image processing :
-    `sudo pacman –S opencv opencv-samples eigen`
+    `sudo pacman –S opencv opencv-samples eigen` 
 Now, learn some language programming ^_^
