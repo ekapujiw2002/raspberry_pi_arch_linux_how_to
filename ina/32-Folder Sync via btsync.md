@@ -1,4 +1,4 @@
-# BTSYNC
+# Folder Sync via btsync
 1. Download btsync arm : `wget http://download-lb.utorrent.com/endpoint/btsync/os/linux-arm/track/stable`
 2. Rename filenya sebagai **btsync.tar.gz**
 3. Ekstrak filenya dengan `tar -xvf btsync.tar.gz`
