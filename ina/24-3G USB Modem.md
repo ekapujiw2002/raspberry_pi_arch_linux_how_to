@@ -45,7 +45,8 @@
 
 13.	 Ubah owner dan group sakis3g sesuai akun root dengan :
     `sudo chown root:root sakis3g` 
-Kopikan file sakis3g ke **/usr/bin**
+
+	Kopikan file sakis3g ke **/usr/bin**
 14.	Tes koneksi dengan : `sakis3g --sudo "connect"`
 seharusnya bisa konek
 15.	Untuk cek status koneksi : `sakis3g status`
