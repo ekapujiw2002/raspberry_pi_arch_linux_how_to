@@ -33,7 +33,7 @@
 9.	Run sudo `sakis3g –interactive`
 10.	Konek ke usb 3g modem dengan interface biasanya interface0. jangan set APN_USER dan APN_PASS kosong. Isi saja dengan sembarang isian.
 11.	Setelah konek maka catat informasi koneksinya
-12.	Buat file /etc/sakis3g.conf sebagai root dan isi dengan
+12.	Buat file **/etc/sakis3g.conf** sebagai root dan isi dengan
 	```
 	USBDRIVER="option"
 	USBINTERFACE="0"
@@ -44,11 +44,12 @@
 	```
 
 13.	 Ubah owner dan group sakis3g sesuai akun root dengan :
-    ```sudo chown root sakis3g; sudo chgrp root sakis3g```
-14.	Tes koneksi dengan : `sudo ./sakis3g --sudo "connect"`
+    `sudo chown root:root sakis3g` 
+Kopikan file sakis3g ke **/usr/bin**
+14.	Tes koneksi dengan : `sakis3g --sudo "connect"`
 seharusnya bisa konek
-15.	Untuk cek status koneksi : `sudo ./sakis3g status`
-16.	Untuk cek info dengan : `sudo ./sakis3g connect info`
+15.	Untuk cek status koneksi : `sakis3g status`
+16.	Untuk cek info dengan : `sakis3g connect info`
 
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
