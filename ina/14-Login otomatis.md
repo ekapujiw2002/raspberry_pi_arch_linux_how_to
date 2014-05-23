@@ -10,7 +10,7 @@ Type=simple
 ```
 4.	Set default target ke multi-user-target agar tidak ada eror muncul :
 `systemctl enable multi-user.target`
-5.	Untuk mengubah default pesan saat login maka ubah file **/etc/issue** dengan `sudo nano /etc/issue`
+5.	Untuk mengubah default pesan saat login via SSH maka ubah file **/etc/issue** dengan `sudo nano /etc/issue` . Untuk default message setelah login ubah file **/etc/motd**
 6.	Reboot : `sudo shutdown –r now`
 
 Referensi :
