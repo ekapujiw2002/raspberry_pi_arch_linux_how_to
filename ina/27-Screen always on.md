@@ -6,9 +6,9 @@ Untuk membuat layar selalu *on* dan tidak masuk kondisi *sleep* maka lakukan lan
 2. Tambahkan bari berikut pada file *.xinitrc* :
 
 	```
-	@xset s off			#remove screen flash and shutdown screensaver
-	@xset -dpms			#make the screen always on
-	@xset s noblank
-	@xscreensaver -no-splash
-	@unclutter			#remove mouse cursor
+	xset s off			#remove screen flash and shutdown screensaver
+	xset -dpms			#make the screen always on
+	xset s noblank
+	xscreensaver -no-splash
+	unclutter &			#remove mouse cursor
 	```
