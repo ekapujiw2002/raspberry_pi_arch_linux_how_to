@@ -16,6 +16,7 @@ Jika diinginkan agar external storage dapat di-load otomatis pada saat plugin, m
 4. Aktifkan servis udevil sebagai root : `sudo systemctl enable devmon@root`
 5. Reboot
 6. Plugin usb flash disk atau hdd external(PASTIKAN ARUS USB ANDA KUAT!!!), dan otomatis storage external akan di-mount di /media. **PASTIKAN STORAGE-NYA ADA LABELNYA!!!**
+7. Untuk menghilangkan pesan **No cachingmode page found** maka tambahkan `loglevel=2` di `/boot/cmdline.txt`
 
 Ref :
  - http://ccollins.wordpress.com/2013/02/04/how-to-mount-usb-disks-on-linux/
@@ -23,3 +24,4 @@ Ref :
  - http://techsaju.wordpress.com/2013/03/04/mount-usb-drive-in-archlinux-raspberry-pi/
  - http://www.techjawab.com/2013/06/how-to-setup-mount-auto-mount-usb-hard.html
  - http://obihoernchen.net/wordpress/770/plug_computer_arch_linux/
+ - https://www.onebytetoomany.co.uk/linux-preventing-no-caching-mode-page-present-errors-from-showing-up-on-boot.html
