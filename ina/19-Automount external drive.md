@@ -11,11 +11,16 @@
 
 Jika diinginkan agar external storage dapat di-load otomatis pada saat plugin, maka pergunakan langkah berikut ini :
 1. Install udevil dan ntfs-3g : `sudo pacman -Sy udevil ntfs-3g`
+
 2. Edit file konfigurasinya : `sudo nano /etc/udevil/udevil.conf` dan tambahkan opsi **big_writes** pada section **default_options_ntfs=** dan **allowed_options=**
+
 3. Buat folder di root yaitu media : `sudo mkdir /media`
+
 4. Aktifkan servis udevil sebagai root : `sudo systemctl enable devmon@root`
+
 5. Reboot
 6. Plugin usb flash disk atau hdd external(PASTIKAN ARUS USB ANDA KUAT!!!), dan otomatis storage external akan di-mount di /media. **PASTIKAN STORAGE-NYA ADA LABELNYA!!!**
+
 7. Untuk menghilangkan pesan **No cachingmode page found** maka tambahkan `loglevel=2` di `/boot/cmdline.txt`
 
 Ref :
