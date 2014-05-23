@@ -10,4 +10,8 @@ Type=simple
 ```
 4.	Set default target ke multi-user-target agar tidak ada eror muncul :
 `systemctl enable multi-user.target`
-5.	Reboot : `sudo shutdown –r now`
+5.	Untuk mengubah default pesan saat login maka ubah file **/etc/issue** dengan `sudo nano /etc/issue`
+6.	Reboot : `sudo shutdown –r now`
+
+Referensi :
+ - https://wiki.archlinux.org/index.php/Secure_Shell
