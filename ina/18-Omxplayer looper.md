@@ -32,7 +32,7 @@
         for entry in $(ls $VIDEOPATH/* | sort -R)
         do
 			#run omxplayer with window position at some points and vol and pipe it
-			sudo omxplayer --win "0 110 590 700" -r -b -p -o hdmi --vol -500 "$entry" < $FIFOFILE &
+			sudo omxplayer --win "0 110 590 700" -r -b -p -o hdmi --vol -500 "$entry" > /dev/null > 2&>1 < $FIFOFILE &
                 
             #play it directly
 			echo -n p > $FIFOFILE
