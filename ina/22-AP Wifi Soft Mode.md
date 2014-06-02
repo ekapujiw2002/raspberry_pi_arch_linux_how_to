@@ -22,11 +22,11 @@
 
 	a. Download binari hostapd yang telah dimodifikasi di link http://dl.dropbox.com/u/1663660/hostapd/hostapd
 
-	b. Rename /usr/bin/hostapd dengan : sudo mv /usr/bin/hostapd /usr/bin/hostapd.bak
+	b. Rename **/usr/bin/hostapd** dengan : **sudo mv /usr/bin/hostapd /usr/bin/hostapd.bak**
 
-	c. Kopikan hostapd yg didownloa dke /usr/bin
+	c. Kopikan hostapd yg didownloa dke **/usr/bin**
 
-	d. Edit /etc/hostapd/hostapd.conf dan ubah driver=nl80211 menjadi driver=rtl871xdrv. Hal ini berlaku untuk semua konfigurasi hostapd.
+	d. Edit **/etc/hostapd/hostapd.conf** dan ubah **driver=nl80211** menjadi **driver=rtl871xdrv**. Hal ini berlaku untuk semua konfigurasi hostapd.
 
 5. install dnsmasq	: ```sudo pacman -S dnsmasq```
 6. tes hostapd dengan konfigurasi minimal sbb :
@@ -88,7 +88,8 @@
 	###########Start dnsmasq, modify if required##########
 	if [ -z "$(ps -e | grep dnsmasq)" ]
 	then
-	 dnsmasq
+	 touch /tmp/dnsmasq.lease
+	 dnsmasq -l /tmp/dnsmasq.lease
 	fi
 	###########
 	 
@@ -114,3 +115,8 @@
 12. tambahkan mode x ke file di atas dengan ```sudo chmod +x initSoftAP.sh```
 13. run scriptnya sbb : ```sudo ./initSoftAP.sh wlan0 eth0```
 14. tes akses ke ap wifi Anda
+
+Referensi :
+ - https://wiki.archlinux.org/index.php/Software_access_point
+ - http://anarsoul.blogspot.com/2013/08/access-point-with-raspberry-pi-and.html
+ - http://raspberry-at-home.com/hotspot-wifi-access-point/
