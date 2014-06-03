@@ -40,7 +40,7 @@ d. Cek dengan `systemctl status httpd`
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
-2. Start mysql server dengan : `sudo systemctl start mysqld`
+2. Start mysql server dengan : `sudo systemctl start mysqld`. Untuk menghidupkan server MySQL pada saat boot, maka lakukan  `sudo systemctl enable mysqld`
 3. Jika mysql server tidak dapat dijalankan, maka edit file **/etc/mysql/my.cnf** dan hilangkan tanda # di depan smua innodb. Lalu delete file **/var/lib/mysql/ibdata1**
 4.	Ubah default ke myisam dengan menambahkan opsi berikut ke **my.cnf** :
 	> ignore-builtin-innodb
