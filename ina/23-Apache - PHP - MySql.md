@@ -22,6 +22,7 @@ a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section pr
  </IfModule>
  ```
 b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost
+
 c. Restart apache : `sudo systemctl restart httpd`
 d. Cek dengan `systemctl status httpd`
 
