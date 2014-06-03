@@ -10,6 +10,7 @@
 8. *Auto start http* saat *boot* dengan : `sudo systemctl enable httpd`
 9. Ketikkan ip raspi dan server sudah terinstall. Direktori web berada di **/srv/http**
 10. Untuk mengoptimalkan Apache agar sesuai dengan spesifikasi Raspberry Pi , maka lakukan langkah berikut ini :
+
 a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section prefork menjadi :
  ```
  <IfModule mpm_prefork_module>
