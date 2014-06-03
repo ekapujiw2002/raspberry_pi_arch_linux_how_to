@@ -9,6 +9,19 @@
 7. *Restart apache* : `sudo systemctl restart httpd`
 8. *Auto start http* saat *boot* dengan : `sudo systemctl enable httpd`
 9. Ketikkan ip raspi dan server sudah terinstall. Direktori web berada di **/srv/http**
+10. Untuk mengoptimalkan Apache agar sesuai dengan spesifikasi Raspberry Pi , maka lakukan langkah berikut ini :
+a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section prefork menjadi :
+ ```
+ <IfModule mpm_prefork_module>
+     StartServers             1
+     MinSpareServers          1
+     MaxSpareServers          5
+     MaxRequestWorkers      250
+     MaxConnectionsPerChild 300
+ </IfModule>
+ ```
+b. Restart apache : `sudo systemctl restart httpd`
+c. Cek dengan `systemctl status httpd`
 
 ##PHP
 1. Install php dengan `sudo pacman -S php php-apache`
@@ -55,3 +68,7 @@
  - http://www.cyberciti.biz/faq/what-is-mysql-binary-log/
  - http://www.pontikis.net/blog/how-and-when-to-enable-mysql-logs
  - http://www.wunderkraut.com/blog/lean-local-mysql-turn-off-binary-logs/2013-09-26
+ - http://www.narga.net/optimizing-apachephpmysql-low-memory-server/
+ - http://serverfault.com/questions/21106/how-to-reduce-memory-usage-on-a-unix-webserver
+ - http://emergent.urbanpug.com/?p=60
+ - http://www.hostocol.in/base/apache/optime-apache-for-better-performance-and-ram-usage/
