@@ -21,8 +21,9 @@ a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section pr
      MaxConnectionsPerChild 300
  </IfModule>
  ```
-b. Restart apache : `sudo systemctl restart httpd`
-c. Cek dengan `systemctl status httpd`
+b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost
+c. Restart apache : `sudo systemctl restart httpd`
+d. Cek dengan `systemctl status httpd`
 
 ##PHP
 1. Install php dengan `sudo pacman -S php php-apache`
@@ -73,3 +74,4 @@ c. Cek dengan `systemctl status httpd`
  - http://serverfault.com/questions/21106/how-to-reduce-memory-usage-on-a-unix-webserver
  - http://emergent.urbanpug.com/?p=60
  - http://www.hostocol.in/base/apache/optime-apache-for-better-performance-and-ram-usage/
+ - http://aslamnajeebdeen.com/blog/how-to-fix-apache-could-not-reliably-determine-the-servers-fully-qualified-domain-name-using-127011-for-servername-error-on-ubuntu
