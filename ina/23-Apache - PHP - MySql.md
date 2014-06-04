@@ -21,10 +21,9 @@ a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section pr
      MaxConnectionsPerChild 300
  </IfModule>
  ```
-b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost
-
-c. Restart apache : `sudo systemctl restart httpd`
-d. Cek dengan `systemctl status httpd`
+b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost  
+c. Restart apache : `sudo systemctl restart httpd`  
+d. Cek dengan `systemctl status httpd`  
 
 ##PHP
 1. Install php dengan `sudo pacman -S php php-apache`
