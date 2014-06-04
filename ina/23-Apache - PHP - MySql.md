@@ -60,7 +60,7 @@ d. Cek dengan `systemctl status httpd`
 
 ##INSTALL PHPMYADMIN
 1. Install phpmyadmin dan php-mcrypt dengan : `sudo pacman –S phpmyadmin php-mcrypt`
-
+2. Konfigurasi sesuai dengan petunjuk di link https://wiki.archlinux.org/index.php/PhpMyAdmin  
 
 **Reference**
  - https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-arch-linux
@@ -75,3 +75,4 @@ d. Cek dengan `systemctl status httpd`
  - http://emergent.urbanpug.com/?p=60
  - http://www.hostocol.in/base/apache/optime-apache-for-better-performance-and-ram-usage/
  - http://aslamnajeebdeen.com/blog/how-to-fix-apache-could-not-reliably-determine-the-servers-fully-qualified-domain-name-using-127011-for-servername-error-on-ubuntu
+ - https://wiki.archlinux.org/index.php/PhpMyAdmin
