@@ -11,19 +11,21 @@
 9. Ketikkan ip raspi dan server sudah terinstall. Direktori web berada di **/srv/http**
 10. Untuk mengoptimalkan Apache agar sesuai dengan spesifikasi Raspberry Pi , maka lakukan langkah berikut ini :
 
-a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section prefork menjadi :
- ```
- <IfModule mpm_prefork_module>
-     StartServers             1
-     MinSpareServers          1
-     MaxSpareServers          5
-     MaxRequestWorkers      250
-     MaxConnectionsPerChild 300
- </IfModule>
- ```
-b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost  
-c. Restart apache : `sudo systemctl restart httpd`  
-d. Cek dengan `systemctl status httpd`  
+	a. Edit file **/etc/httpd/conf/extra/httpd-mpm.conf** dan ubah konten section prefork menjadi :
+	 ```
+	 <IfModule mpm_prefork_module>
+	     StartServers             1
+	     MinSpareServers          1
+	     MaxSpareServers          5
+	     MaxRequestWorkers      250
+	     MaxConnectionsPerChild 300
+	 </IfModule>
+	 ```
+	b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost  
+	c. Restart apache : `sudo systemctl restart httpd`  
+	d. Cek dengan `systemctl status httpd`  
+
+11. Jika folder document root Apache akan diubah maka pastikan bahwa foldernya telah diset permissionnya dengan benar di file **/etc/httpd/conf/httpd/conf** dan telah di-allow untuk dibuka pada bagian konfigurasi PHP-nya di file **/etc/php/php.ini** section **open_basedir**
 
 ##PHP
 1. Install php dengan `sudo pacman -S php php-apache`
