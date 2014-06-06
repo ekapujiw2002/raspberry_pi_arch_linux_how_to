@@ -15,7 +15,7 @@
 	```
 	sudo mjpg_streamer -i "/usr/lib/input_uvc.so -d /dev/video0  -r 320x240 -f 30 -y" -o "/usr/lib/output_http.so -p 8090 -w /var/www/mjpg_streamer"
 	```
-
+	Untuk membuat agar mjpg_streamer jalan di background, maka tambahkan ` > /dev/null 2&>1 &` di belakang kode di atas.  
 	keterangan :
 	- d : device videonya
 	- r : resolusinya
