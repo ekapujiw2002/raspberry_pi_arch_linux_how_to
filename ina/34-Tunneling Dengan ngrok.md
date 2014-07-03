@@ -7,7 +7,7 @@
 6. Setelah itu maka kita akan mendapatkan token yg dipakai untuk koneksi custom kita. Catat token ini, misal tokennya 7hLHvtNPwU98Kx76Gcac
 7. Buat sebuah file konfigurasi kustom, misal dengan nama **tes.cfg**, dan tempatkan 1 folder dengan ngrok. Isikan token ke dalam file ini sebagai berikut : `auth_token: 7hLHvtNPwU98Kx76Gcac`  
 8. Dengan file konfigurasi kustom ini maka dapat dibuat multiple tunnel dengan mudah. Dalam contoh ini maka akan dibuat tunnel pada port 80, 8090, dan 8091 lokal. Port 80 untuk webserver, 8090 dan 8091 untuk port kamera yang dikonfigurasi dengan software motion. Isi file konfigurasi sbb :
- ```
+```
  auth_token: 7hLHvtNPwU98Kx76Gcqv
  tunnels:
   cam1:
@@ -22,9 +22,9 @@
    subdomain: "indo_raspi"
    proto:
     http: 80
- ```
-10. Start ngrok dengan perintah : `./ngrok -config="/home/raspi/ngrok/tes.cfg" start web cam1 cam2`
-11. 
+```
+9. Start ngrok dengan perintah : `./ngrok -config="/home/raspi/ngrok/tes.cfg" start web cam1 cam2`
+10. 
 
 Referensi :
 - http://inexpensivehomeinternet.blogspot.com/2014/01/ngrok-tunneling-notes.html
