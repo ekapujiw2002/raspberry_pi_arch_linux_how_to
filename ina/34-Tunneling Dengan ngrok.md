@@ -26,6 +26,7 @@
 
 9. Start ngrok dengan perintah : `./ngrok -config="/home/raspi/ngrok/tes.cfg" start web cam1 cam2`
 10. Agar ngrok bekerja di belakang layar maka pergunakan perintah berikut : `./ngrok -config="/home/raspi/ngrok/tes.cfg" -log=stdout start web cam1 cam2 >/dev/null &`
+11. Tunnel bisa dibuka pada link : indo_raspi.ngrok.com, indo_raspi_cam1.ngrok.com, dan indo_raspi_cam2.ngrok.com
 
 Referensi :
 - http://inexpensivehomeinternet.blogspot.com/2014/01/ngrok-tunneling-notes.html
