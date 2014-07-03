@@ -29,7 +29,7 @@ Dan cam2.conf sbb :
 > **v4l2_palette** : pilih sesuai mode gambar yang didukung kamera Anda. Umumnya semua kamera mendukung mode YUYV atau nomor 6.  
 > **width dan height** : sesuaikan dengan gambar yang akan ditampilkan dan dukungan kamera. Ukuran 320x240 standar biasanya.  
 > **quality** : menentukan persentase kualitas gambar ter-capture. Makin tinggi maka makin besar ukuran filenya dan makin bagus hasilnya.  
-> **target_dir** : folder tempat menyimpan hasil capture gambar dan film. Sebaiknya di storage luar, misal HDD atau flash disk.  
+> **target_dir** : folder tempat menyimpan hasil capture gambar dan film. Sebaiknya di storage luar, misal HDD atau flash disk (https://github.com/ekapujiw2002/raspberry_pi_arch_linux_how_to/blob/master/ina/19-Automount%20external%20drive.md).  
 > **webcam_quality** : Kualitas gambar yang tertampil di browser.  
 > **webcam_maxrate** : FPS gambar tertampil di browser.  
 > **webcam_localhost** : Pastikan ini bernilai off agar stream kamera dapat dilihat dari luar.  
