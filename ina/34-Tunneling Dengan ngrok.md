@@ -10,18 +10,18 @@
  ```
  auth_token: 7hLHvtNPwU98Kx76Gcqv
  tunnels:
-  cam1:
-   subdomain: "indo_raspi_cam1"
-   proto:
-    http: 8090
-  cam2:
-   subdomain: "indo_raspi_cam2"
-   proto:
-    http: 8091
-  web:
-   subdomain: "indo_raspi"
-   proto:
-    http: 80
+   cam1:
+     subdomain: "indo_raspi_cam1"
+     proto:
+      http: 8090
+   cam2:
+     subdomain: "indo_raspi_cam2"
+     proto:
+      http: 8091
+   web:
+     subdomain: "indo_raspi"
+     proto:
+      http: 80
  ```
 
 9. Start ngrok dengan perintah : `./ngrok -config="/home/raspi/ngrok/tes.cfg" start web cam1 cam2`
