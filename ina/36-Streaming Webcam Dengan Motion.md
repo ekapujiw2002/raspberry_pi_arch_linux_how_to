@@ -26,7 +26,7 @@ Dan cam2.conf sbb :
 	webcam_port 8091
 	```
 5. Ubah konfigurasi dari motion dengan mengedit file /etc/motion/motion.conf. Beberapa item yang perlu disesuaikan yaitu :
-> **v4l2_palette** : pilih sesuai mode gambar yang didukung kamera Anda. Umumnya semua kamera mendukung mode YUYV atau nomor 6.
+> **v4l2_palette** : pilih sesuai mode gambar yang didukung kamera Anda. Umumnya semua kamera mendukung mode YUYV atau nomor 6.  
 > **width dan height** : sesuaikan dengan gambar yang akan ditampilkan dan dukungan kamera. Ukuran 320x240 standar biasanya.
 > **quality** : menentukan persentase kualitas gambar ter-capture. Makin tinggi maka makin besar ukuran filenya dan makin bagus hasilnya.
 > **target_dir** : folder tempat menyimpan hasil capture gambar dan film. Sebaiknya di storage luar, misal HDD atau flash disk.
@@ -43,4 +43,6 @@ Dan cam2.conf sbb :
 7. Untuk menjalankan motion di background , maka pergunakan : `sudo motion & > /dev/null &` . Untuk mematikan motion pergunakan `sudo pkill motion`.
 
 Referensi:
- - http://www.linuxcircle.com/2013/02/06/faster-video-streaming-on-raspberry-media-server-with-mjpg-streamer/
+ - http://jeremyblythe.blogspot.co.uk/2012/06/battery-powered-wireless-motion.html
+ - https://learn.adafruit.com/raspberry-pi-garage-door-opener/motion-setup
+ - http://pingbin.com/2012/12/raspberry-pi-web-cam-server-motion/
