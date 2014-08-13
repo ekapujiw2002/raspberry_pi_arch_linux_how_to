@@ -38,6 +38,7 @@
 4. Edit file **/etc/httpd/conf/mime.types** dan tambahkan `application/x-httpd-php       php    php5`
 5. Buat sebuah file php di folder **/srv/http/** dan isi dengan : `<?php phpinfo(); ?>`
 6. Restart service httpd dengan `sudo systemctl restart httpd` dan buka file php di atas di browser
+7. Jika diinginkan agar script php dapat mengeksekusi command shell maka tambahkan kode berikut ke file **/etc/sudoers** : `%http ALL=(ALL) NOPASSWD: ALL`
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
