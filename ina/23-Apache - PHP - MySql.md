@@ -21,11 +21,11 @@
 	     MaxConnectionsPerChild 300
 	 </IfModule>
 	 ```
-	b. Edit file **/etc/httpd/conf/httpd/conf** dan isi **ServerName** dengan localhost  
+	b. Edit file **/etc/httpd/conf/httpd.conf** dan isi **ServerName** dengan localhost  
 	c. Restart apache : `sudo systemctl restart httpd`  
 	d. Cek dengan `systemctl status httpd`  
 
-11. Jika folder document root Apache akan diubah maka pastikan bahwa foldernya telah diset permissionnya dengan benar di file **/etc/httpd/conf/httpd/conf** dan telah di-allow untuk dibuka pada bagian konfigurasi PHP-nya di file **/etc/php/php.ini** section **open_basedir**
+11. Jika folder document root Apache akan diubah maka pastikan bahwa foldernya telah diset permissionnya dengan benar di file **/etc/httpd/conf/httpd.conf** dan telah di-allow untuk dibuka pada bagian konfigurasi PHP-nya di file **/etc/php/php.ini** section **open_basedir**
 
 ##PHP
 1. Install php dengan `sudo pacman -S php php-apache`
