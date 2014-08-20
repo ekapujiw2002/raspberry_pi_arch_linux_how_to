@@ -26,14 +26,15 @@ Dan cam2.conf sbb :
 	webcam_port 8091
 	```
 5. Ubah konfigurasi dari motion dengan mengedit file /etc/motion/motion.conf. Beberapa item yang perlu disesuaikan yaitu :
-> **v4l2_palette** : pilih sesuai mode gambar yang didukung kamera Anda. Umumnya semua kamera mendukung mode YUYV atau nomor 6.  
-> **width dan height** : sesuaikan dengan gambar yang akan ditampilkan dan dukungan kamera. Ukuran 320x240 standar biasanya.  
-> **quality** : menentukan persentase kualitas gambar ter-capture. Makin tinggi maka makin besar ukuran filenya dan makin bagus hasilnya.  
-> **target_dir** : folder tempat menyimpan hasil capture gambar dan film. Sebaiknya di storage luar, misal HDD atau flash disk (https://github.com/ekapujiw2002/raspberry_pi_arch_linux_how_to/blob/master/ina/19-Automount%20external%20drive.md).  
+> **framerate** : Menentukan kecepatan capture dari kamera. Semakin besar, maka semakin cepat hasil capture-nya dan semakin smooth frame yang ditampilkan. Untuk hasil optimal, set ke 100.  
+> **v4l2_palette** : Pilih sesuai mode gambar yang didukung kamera Anda. Umumnya semua kamera mendukung mode YUYV atau nomor 6.  
+> **width dan height** : Sesuaikan dengan gambar yang akan ditampilkan dan dukungan kamera. Ukuran 320x240 standar biasanya.  
+> **quality** : Menentukan persentase kualitas gambar ter-capture. Makin tinggi maka makin besar ukuran filenya dan makin bagus hasilnya.  
+> **target_dir** : Folder tempat menyimpan hasil capture gambar dan film. Sebaiknya di storage luar, misal HDD atau flash disk (https://github.com/ekapujiw2002/raspberry_pi_arch_linux_how_to/blob/master/ina/19-Automount%20external%20drive.md).  
 > **webcam_quality** : Kualitas gambar yang tertampil di browser.  
 > **webcam_maxrate** : FPS gambar tertampil di browser.  
 > **webcam_localhost** : Pastikan ini bernilai off agar stream kamera dapat dilihat dari luar.  
-> **thread** : ini berfungsi untuk me-load konfigurasi kustom yang telah dibuat tadi dengan mengubahnya menjadi :
+> **thread** : Ini berfungsi untuk me-load konfigurasi kustom yang telah dibuat tadi dengan mengubahnya menjadi :
 > 	```
 > 	thread /home/raspi/motion/cam1.conf
 > 	thread /home/raspi/motion/cam2.conf
