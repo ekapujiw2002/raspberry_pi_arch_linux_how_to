@@ -40,7 +40,7 @@ Dan cam2.conf sbb :
 > 	```
 
 6. Jalankan motion dengan : `sudo motion` dan bukalah alamat viewernya di browser, misal http://192.168.1.250/motion sesuai dengan langkah nomor 4.
-7. Untuk menjalankan motion di background , maka pergunakan : `sudo motion & > /dev/null &` . Untuk mematikan motion pergunakan `sudo pkill motion`.
+7. Untuk menjalankan motion di background , maka pergunakan : `sudo motion &>/dev/null &` . Untuk mematikan motion pergunakan `sudo pkill motion`.
 
 Referensi:
  - http://jeremyblythe.blogspot.co.uk/2012/06/battery-powered-wireless-motion.html
