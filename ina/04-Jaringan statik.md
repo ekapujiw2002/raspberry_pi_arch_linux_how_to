@@ -21,7 +21,7 @@
 	DNS=('192.168.1.1' '8.8.8.8')
 	```
 
-5.	Aktifkan profil ini pada saat boot dengan printah : `netctl enable eth0`. Jika ada beberapa interface ethernet yang terhubung ke raspi, maka aktifkan saja service spesial netctl untuk ethernet dengan `sudo systemctl netctl-ifplugd@eth0.service` untuk eth0. Untuk nama profil lainnnya, sesuaikan saja. **PASTIKAN PROFILNYA SUDAH DIMATIKAN DENGAN `sudo netctl disable eth0`.**
+5.	Aktifkan profil ini pada saat boot dengan printah : `netctl enable eth0`. Jika ada beberapa interface ethernet yang terhubung ke raspi, maka aktifkan saja service spesial netctl untuk ethernet dengan `sudo systemctl enable netctl-ifplugd@eth0.service` untuk eth0. Untuk nama profil lainnnya, sesuaikan saja. **PASTIKAN PROFILNYA SUDAH DIMATIKAN DENGAN `sudo netctl disable eth0`.**
 6.	Matikan servis dhcp dengan printah : `systemctl disable dhcpcd@eth0.service`
 7.	Edit file **/etc/resolve.conf** dan ubah nameserver menjadi 192.168.1.1 dengan menambahkan baris berikut ini : `nameserver 192.168.1.1`
 8.	Edit **/boot/cmdline.txt** dan hapus setingan ip statik yang dipergunakan pada saat inisialiasi koneksi raspi.
