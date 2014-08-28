@@ -33,7 +33,8 @@
  ```
  LoadModule php5_module modules/libphp5.so
  Include conf/extra/php5_module.conf
- ```
+ ```  
+ 
 3. Ganti mpm_event dengan mpm_prefork pada file yang sama dengan mengomentari `LoadModule mpm_event_module modules/mod_mpm_event.so` dan ganti dengan `LoadModule mpm_prefork_module modules/mod_mpm_prefork.so`
 4. Edit file **/etc/httpd/conf/mime.types** dan tambahkan `application/x-httpd-php       php    php5`
 5. Buat sebuah file php di folder **/srv/http/** dan isi dengan : `<?php phpinfo(); ?>`
