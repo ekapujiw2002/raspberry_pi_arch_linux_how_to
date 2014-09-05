@@ -28,3 +28,6 @@
  `disable_splash=1`
 
 9.	*Reboot* dengan : `sudo shutdown –r now`
+
+Referensi :
+- http://raspberrypi.stackexchange.com/questions/7332/what-is-the-difference-between-cea-and-dmt
