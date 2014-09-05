@@ -15,10 +15,16 @@
  sdram_freq=450
  ```
 
-6.	Set ram usage untuk display ke 128 :
+6. Untuk mengeset resolusi dan mode dari monitor, maka lakukan perintah ini di konsol : `tvservice -m CEA` dan `tvservice -m DMT`
+
+7. Ubah mode layar dengan mengeset mode hdmi ke DMT (resolusi mengikuti resolusi layar komputer) : **hdmi_group=2**
+
+8. Ubah resolusi layar dengan memilih nomor modenya sesuai hasil nomor 6 misal ke mode 16 : **hdmi_mode=16**
+
+7.	Set ram usage untuk display ke 128 :
  `gpu_mem_512=128`
 
-7.	Hilangkan rainbow splash :
+8.	Hilangkan rainbow splash :
  `disable_splash=1`
 
-8.	*Reboot* dengan : `sudo shutdown –r now`
+9.	*Reboot* dengan : `sudo shutdown –r now`
