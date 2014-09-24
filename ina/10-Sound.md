@@ -2,6 +2,11 @@
 Untuk meng-*update driver* *soundcard*-nya maka pergunakan perintah berikut ini :
 
     sudo pacman -S alsa-firmware alsa-lib alsa-utils pulseaudio pulseaudio-alsa
+    
+Install juga beberapa tambahan berikut ini :
+
+    sudo pacman -S jack2-dbus ffmpeg
+    
 Aktifkan soundcard setelah boot dengan :
 
     echo "snd-bcm2835" >> /etc/modules-load.d/snd-bcm2835.conf
