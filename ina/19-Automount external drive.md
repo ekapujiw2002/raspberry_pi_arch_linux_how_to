@@ -15,7 +15,7 @@ Jika diinginkan agar external storage dapat di-load otomatis pada saat plugin, m
 
 2. Edit file konfigurasinya : `sudo nano /etc/udevil/udevil.conf` dan tambahkan opsi **big_writes** pada section **default_options_ntfs=** dan **allowed_options=**
 
-3. Buat folder di root yaitu media : `sudo mkdir /media`. Untuk efektifnya maka folder media dapat di-*mount* sebagai tmpfs di **/etc/fstab** : `tmpfs   /var/log        tmpfs   nodev,nosuid    0       0`
+3. Buat folder di root yaitu media : `sudo mkdir /media`. Untuk efektifnya maka folder media dapat di-*mount* sebagai tmpfs di **/etc/fstab** : `tmpfs   /media        tmpfs   nodev,nosuid    0       0`
 
 4. Aktifkan servis udevil sebagai root : `sudo systemctl enable devmon@root`
 
