@@ -6,7 +6,7 @@
 [Service]
 	ExecStart=
 	ExecStart=-/usr/bin/agetty --autologin <username> --noclear %I 38400 linux
-Type=simple
+	Type=simple
 ```
 4.	Set default target ke multi-user-target agar tidak ada eror muncul :
 `systemctl enable multi-user.target`
