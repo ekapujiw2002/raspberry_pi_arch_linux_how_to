@@ -2,7 +2,7 @@
 1. Download btsync arm : `wget http://download-lb.utorrent.com/endpoint/btsync/os/linux-arm/track/stable`
 2. Rename filenya sebagai **btsync.tar.gz**
 3. Ekstrak filenya dengan `tar -xvf btsync.tar.gz`
-4. Run : `./btsync --dump-sample-file > tes.cfg`
+4. Run : `./btsync --dump-sample-config > tes.cfg`
 5. Edit tes.cfg dengan `nano tes.cfg` dan ubah opsi berikut ini :
  - device_name	: nama untuk device yang menjadi client. bebas
  - listening_port	: port untuk listen sync server. sesuaikan dengan port sync server
