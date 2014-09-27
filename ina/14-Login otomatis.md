@@ -15,3 +15,4 @@
 
 Referensi :
  - https://wiki.archlinux.org/index.php/Secure_Shell
+ - https://wiki.archlinux.org/index.php/Motd
