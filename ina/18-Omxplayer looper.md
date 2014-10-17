@@ -37,6 +37,8 @@
                 
             #play it directly
 			echo -n p > $FIFOFILE
+			#twice
+			echo -n p > $FIFOFILE
 			
 			#wait until player stopped
 			while ps ax | grep -v grep | grep $SERVICE > /dev/null; do
