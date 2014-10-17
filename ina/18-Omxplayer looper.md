@@ -59,3 +59,6 @@
 6.	Untuk pengetesan jalankan file shell dengan `sudo ./omx.sh &`
 7.	Untuk mengatur perintah yang akan dikirimkan ke omxplayer pergunakan `echo –n [perintah] > ~/video_looper/omx_fifo`
 8.	Untuk menghentikan looper pergunakan : `sudo pkill omx`
+
+Referensi :
+- http://linux.101hacks.com/linux-commands/suppress-standard-output-and-error/
