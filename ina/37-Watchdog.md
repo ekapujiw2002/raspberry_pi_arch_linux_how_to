@@ -7,10 +7,10 @@ Watchdog merupakan fitur yang sangat berguna untuk membuat sistem tetap on trus,
 2. Untuk me-*load* secara otomatis modul ini maka masukkan teks **bcm2708_wdog** ke file **/etc/modules-load.d/raspberrypi.conf**.
 3. *Install* modul *watchdog* timer menggunakan perintah : ```sudo pacman -S watchdog```
 4. Edit file **/etc/watchdog.conf** dengan perintah ```sudo nano /etc/watchdog.conf``` dan ubah item berikut ini :  
-	a. Hilangkan tanda # untuk item **max-load-1 = 24**. Item ini akan membuat watchdog reset jika Raspberry Pi sibuk dengan 25 proses atau lebih dalam 1 menit
-    b. Hilangkan tanda # untuk item **watchdog-device**
-    c. Tambahkan item **watchdog-timeout=10** untuk mengeset timeout watchdog maksimal 10 detik. Nilai maksimal yaitu 15 detik
-    d. Pastikan item **realtime** dan **priority** diaktifkan
+	a. Hilangkan tanda # untuk item **max-load-1 = 24**. Item ini akan membuat watchdog reset jika Raspberry Pi sibuk dengan 25 proses atau lebih dalam 1 menit  
+    b. Hilangkan tanda # untuk item **watchdog-device**  
+    c. Tambahkan item **watchdog-timeout=10** untuk mengeset timeout watchdog maksimal 10 detik. Nilai maksimal yaitu 15 detik  
+    d. Pastikan item **realtime** dan **priority** diaktifkan  
 5. Start watchdog dengan perintah : ```sudo systemctl start watchdog``` . Cek hasilnya dengan ```sudo systemctl status watchdog```. Seharusnya tidak ada eror.  
 6. Aktifkan watchdog sebagai service sistem dengan : ```sudo systemctl enable watchdog```
 
