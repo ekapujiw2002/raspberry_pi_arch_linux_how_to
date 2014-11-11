@@ -59,3 +59,4 @@
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
  - https://wiki.archlinux.org/index.php/netctl#Automatic_switching_of_profiles
+ - http://sciencewalkinggaming.blogspot.com/2012/11/how-to-set-up-arch-linux-on-raspberry.html
