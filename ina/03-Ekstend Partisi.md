@@ -26,3 +26,4 @@
 	```
 
 4. Lakukan perintah ```df -h``` sehingga akan muncul ukuran setiap partisi yang kini telah menjadi sebesar total kapasitas sdcardnya.
+5. Dapat juga ditambahkan partisi EXT4 baru sebelum proses ini agar SDCARD dapat dibagi menjadi beberapa partisi yang bersifat *read only* dan *read write*. Pastikan untuk partisi yang dibuat diletakkan pada bagian belakang dari sektor yang kosong sebagai **PRIMARY**. Untuk langkahnya dapat menggunakan program partisi di Windows ataupun yang lainnya. Langkah ekstensi partisinya mengikuti langkah di atas.
