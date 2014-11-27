@@ -9,4 +9,4 @@ Install juga **wiringpi** untuk pemrograman *hardware* :
     `sudo pacman –S wiringpi`
     
 Dan jangan lupa **OpenCV** untuk pengolahan data visual :
-    `sudo pacman –S opencv opencv-samples eigen`
+    `sudo pacman –S opencv opencv-samples eigen eigen2`
