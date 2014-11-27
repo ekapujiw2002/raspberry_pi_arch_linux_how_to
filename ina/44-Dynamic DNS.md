@@ -19,6 +19,7 @@
     your_dyndns_subdomain_name
     ```
 3. Aktifkan servisnya dengan `sudo systemctl start ddclient` . Lihat statusnya dengan `sudo systemctl status ddclient -l`
+4. Aktifkan servisnya pada saat boot dengan `sudo systemctl enable ddclient`
 
 Referensi:
 - http://wood1978.techarea.org/~wood/wordpress/2013/04/07/setup-dynamic-dns-on-raspberry-pi-with-arch-linux
