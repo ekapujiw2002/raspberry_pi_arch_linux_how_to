@@ -2,7 +2,7 @@
 Untuk keperluan membuat program, maka lakukan instalasi paket program sebagai berikut :
 
 ```
-sudo pacman -S --needed base-devel python python2 sqlite tk geany
+sudo pacman -S --needed base-devel python python2 sqlite tk geany ed python-setuptools python-pip
 ```
 
 Install juga **wiringpi** untuk pemrograman *hardware* :
