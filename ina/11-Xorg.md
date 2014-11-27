@@ -8,7 +8,7 @@ Xorg merupakan package driver untuk graphic card. Lakukan instalasinya dengan pe
 Selanjutnya install LXDE sebagai engine untuk desktopnya dengan langkah berikut ini :
 
 1.	Ketikkan : `sudo pacman –S --needed lxde`
-2.	Jika nantinya menggunakan gtk maka jangan lupa install : `sudo pacman -S --needed  gnome-themes-standard gnome-icon-theme`
+2.	Jika nantinya menggunakan gtk maka jangan lupa install : `sudo pacman -S --needed  gnome-themes-standard gnome-icon-theme freeglut gtk3 gtk-engines glu`
 3.	Sebagai user biasa ketikkan : `cat > .xinitrc`
 4.	Lalu ketikkan `exec startlxde`
 5.	Tekan enter lalu tekan CTRL+D
