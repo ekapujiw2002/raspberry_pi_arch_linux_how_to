@@ -1,11 +1,12 @@
 #INSTALL DEVELOPMENT ENVIROMENT (C,C++,PYTHON)
 Untuk keperluan membuat program, maka lakukan instalasi paket program sebagai berikut :
 
-    ```
-    sudo pacman -S base-devel
-    sudo pacman -S python python2 sqlite tk
-    sudo pacman -S geany
-    ```    
+```
+sudo pacman -S base-devel
+sudo pacman -S python python2 sqlite tk
+sudo pacman -S geany
+```
+
 Install juga **wiringpi** untuk pemrograman *hardware* :
     `sudo pacman –S wiringpi`
     
