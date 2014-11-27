@@ -1,5 +1,6 @@
 #INSTALL DEVELOPMENT ENVIROMENT (C,C++,PYTHON)
 Untuk keperluan membuat program, maka lakukan instalasi paket program sebagai berikut :
+
     ```
     sudo pacman -S base-devel
     sudo pacman -S python python2 sqlite tk
