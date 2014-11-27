@@ -40,24 +40,26 @@
 5. Buat sebuah file php di folder **/srv/http/** dan isi dengan : `<?php phpinfo(); ?>`
 6. Restart service httpd dengan `sudo systemctl restart httpd` dan buka file php di atas di browser
 7. Jika diinginkan agar script php dapat mengeksekusi command shell maka tambahkan kode berikut ke file **/etc/sudoers** : `%http ALL=(ALL) NOPASSWD: ALL`
+8. Aktifkan ekstensi **mysql.so** dan **mysqli.so** dengan menghilangkan tanda # di file **/etc/php/php.ini**
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
 2. Start mysql server dengan : `sudo systemctl start mysqld`. Untuk menghidupkan server MySQL pada saat boot, maka lakukan  `sudo systemctl enable mysqld`
 3. Jika mysql server tidak dapat dijalankan, maka edit file **/etc/mysql/my.cnf** dan hilangkan tanda # di depan smua innodb. Lalu delete file **/var/lib/mysql/ibdata1**
 4.	Ubah default ke myisam dengan menambahkan opsi berikut ke **my.cnf** :
-	> ignore-builtin-innodb
 
+	> ignore-builtin-innodb  
 	> default-storage-engine = myisam
 
 5.	Amankan instalasi dengan : `sudo mysql_secure_installation`
 6. Login ke server mysql sebagai root dengan `mysql -u root -p` . Masukkan passwod root pada langkah sebelumnya.
-7. buat user baru misal raspi dengan password raspi menggunakan :
- ```
- create user 'raspi'@'%' identified by 'raspi';
- grant create on *.* to raspi;
- quit
- ```
+7. Buat user baru misal raspi dengan password raspi menggunakan :
+
+	```
+	create user 'raspi'@'%' identified by 'raspi';
+	grant create on *.* to raspi;
+	quit
+	```
 8. Tambahkan `skip-name-resolve` ke **/etc/my.cnf** untuk mem-*bypass* pencarian dns.
 9. Matikan logging mysql dengan memberikan tanda # di depan semua parameter log
 9. Restart mysql server dengan : `sudo systemctl restart mysqld`
@@ -65,6 +67,24 @@
 ##INSTALL PHPMYADMIN
 1. Install phpmyadmin dan php-mcrypt dengan : `sudo pacman –S phpmyadmin php-mcrypt`
 2. Konfigurasi sesuai dengan petunjuk di link https://wiki.archlinux.org/index.php/PhpMyAdmin  
+3. Jalankan perintah `sudo nano /etc/httpd/conf/extra/httpd-phpmyadmin.conf` dan isikan dengan :
+
+	```
+	Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
+	<Directory "/usr/share/webapps/phpMyAdmin">
+	    DirectoryIndex index.html index.php
+	    AllowOverride All
+	    Options FollowSymlinks
+	    Require all granted
+	</Directory>
+	```
+4. Tambahkan isian di bawah ini ke file **/etc/httpd/conf/httpd.conf** :
+
+	```
+	# phpMyAdmin configuration
+	Include conf/extra/httpd-phpmyadmin.conf
+	```
+5. Restart apache dengan `sudo systemctl restart httpd` dan buka link phpmyadmin dari browser
 
 **Reference**
  - https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-arch-linux
