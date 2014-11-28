@@ -22,6 +22,7 @@
 
 	sudo systemctl disable systemd-random-seed
 	```
+8. Ubah konfigurasi **/etc/systemd/journald.conf** dengan mengganti **Storage=none**. Hilangkan tanda # jika ada.
 	
 Referensi :
 -	http://www.ideaheap.com/2013/07/stopping-sd-card-corruption-on-a-raspberry-pi/
