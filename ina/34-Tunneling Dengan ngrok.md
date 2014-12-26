@@ -31,23 +31,23 @@
 #AUTORUN TUNNEL
 Untuk membuat tunnel selalu jalan saat booting atau bahkan saat terjadi error maka buatlah sebuah bash script misal tunnel.sh dan isikan dengan script berikut ini. Set tunnel.sh ke mode executable :
 
- ```
-    #!/bin/bash
-    #http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
-    DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-    
-    #start only if not running yet
-    pidof -x ngrok > /dev/null
-    if [ $? -eq 1 ]; then
-    	while :
-    	do
-    		echo "Start tunnelling..."
-    		$DIR/ngrok -config="$DIR/ngrok.cfg" -log=stdout start dav ssh
-    		echo "Restarting tunnelling in 5 seconds..."
-    		sleep 5
-    	done
-    fi
- ```
+ 	```
+	#!/bin/bash
+	#http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+	DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+	
+	#start only if not running yet
+	pidof -x ngrok > /dev/null
+	if [ $? -eq 1 ]; then
+		while :
+		do
+			echo "Start tunnelling..."
+			$DIR/ngrok -config="$DIR/ngrok.cfg" -log=stdout start dav ssh
+			echo "Restarting tunnelling in 5 seconds..."
+			sleep 5
+		done
+	fi
+ 	```
 
 Referensi :
 - http://inexpensivehomeinternet.blogspot.com/2014/01/ngrok-tunneling-notes.html
