@@ -52,6 +52,62 @@ seharusnya bisa konek
 15.	Untuk cek status koneksi : `sakis3g status`
 16.	Untuk cek info dengan : `sakis3g connect info`
 
+#AUTORUN MODEM
+Untuk membuat modem selalu on dari booting dan jika ada diskoneksi jaringan maka buatlah skrip bash misal activate_modem.sh dengan isian berikut. Skrip ini untuk mengubah modem usb ke mode modem, bukan storage.
+
+```
+#!/bin/bash
+#http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+#12d1:1506 adalah pid:vid untuk mode modem
+lsusb | grep "12d1:1506" > /dev/null
+if [ $? -eq 1 ]; then
+	echo "Switching to modem mode..."
+	sudo usb_modeswitch -c $DIR/usb_modeswitch.conf > /dev/null 2>&1
+	lsusb | grep "12d1:1506" > /dev/null
+	if [ $? -eq 0 ]; then
+		echo "Modem activated..."
+	else
+		echo "Modem activation failed..."
+	fi
+else
+	echo "Modem already activated...."
+fi
+```
+
+Sedangkan untuk mengkoneksikan secara otomatis modemnya dapat menggunakan skrip berikut ini.
+
+```
+#!/bin/bash
+#loop check modem connectivity, reconnect if neccessary
+while true; do
+	echo "Checking connection status...."
+	sakis3g status | grep "Not connected" > /dev/null
+	if [ $? -eq 0 ]; then
+		echo "Disconnected, opening connection..."
+		
+		#try to open modem connection in background
+		#sakis3g --sudo "connect" > /dev/null 2>&1 &
+		sakis3g --sudo "connect" > /dev/null 2>&1
+		
+		#recheck connection
+		#sleep 30
+		sakis3g status | grep "Not connected" > /dev/null
+		if [ $? -eq 0 ]; then
+			echo "Connection failed. Retry in 5 seconds..."
+			sleep 5
+		else
+			echo "Connection established. Recheck in 30 seconds..."
+			sleep 30
+		fi 		 
+	else
+		echo "Connection established. Recheck in 30 seconds..."
+		sleep 30
+	fi
+done
+```
+
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
  - http://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
