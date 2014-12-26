@@ -31,7 +31,7 @@
 #AUTORUN TUNNEL
 Untuk membuat tunnel selalu jalan saat booting atau bahkan saat terjadi error maka buatlah sebuah bash script misal tunnel.sh dan isikan dengan script berikut ini. Set tunnel.sh ke mode executable :
 
- 	```
+```
 	#!/bin/bash
 	#http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
 	DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -47,7 +47,7 @@ Untuk membuat tunnel selalu jalan saat booting atau bahkan saat terjadi error ma
 			sleep 5
 		done
 	fi
- 	```
+```
 
 Referensi :
 - http://inexpensivehomeinternet.blogspot.com/2014/01/ngrok-tunneling-notes.html
