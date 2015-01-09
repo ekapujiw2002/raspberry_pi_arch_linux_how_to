@@ -17,7 +17,7 @@
 
 Jika cara di atas tidak berhasil maka lakukan cara berikut ini :
 
-1. Setelah langkah 1 di atas, maka download program DHCP Server dari http://www.dhcpserver.de/dhcpsrv2.4.zip
+1. Setelah langkah 1 di atas, maka download program DHCP Server dari http://www.dhcpserver.de/cms/download/
 2. Ekstrak filenya ke sebuah folder. Folder disarankan tanpa spasi.
 3. Jalankan dhcpwiz.exe dan ikuti petunjuknya sehingga dihasilkan file dhcpsrv.ini. Untuk **IPPOOL_1** seting dengan range sedikit saja agar memudahkan cek IP Raspiberry Pi, semisal **192.168.1.100-101**. **IPPOOL_1** tidak boleh memasukkan IP yang dipilih sebagai **IPBIND_1**
 4. Jalankan dhcpsrv.exe. Install servisnya dan start.
