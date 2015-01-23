@@ -27,6 +27,7 @@
 8.	Edit **/boot/cmdline.txt** dan hapus setingan ip statik yang dipergunakan pada saat inisialiasi koneksi raspi.
 9.	Reboot
 10.	Kini ip di raspi akan menjadi statik sesuai seting yang telah diset sebelumnya.
+11.	Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
 ##Via Wifi
 1. Buat file profil wifinya misal **/etc/netctl/wlan0** dengan konten sebagai berikut :
