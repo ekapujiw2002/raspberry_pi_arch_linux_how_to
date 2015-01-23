@@ -58,7 +58,44 @@
 3. Untuk kemudahan aktivasi koneksinya maka aktifkan service otomatisnya dengan `sudo systemctl enable netctl-auto@wlan0.service`
 4. Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
-ArchLinux terbaru menggunakan ** systemd-networkd** untuk konfigurasi jaringannya.
+##SYSTEMD-NETWORKD
+ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya. Untuk jaringan ethernet pergunakan langkah berikut ini :
+
+1. Buat file konfigurasi misal **/etc/systemd/network/eth0.network** dengan isi sebagai berikut :
+	
+	```
+	#akan cocok dengan eth0,1,dll...............
+	[Match]
+	Name=eth0
+	
+	[Network]
+	DNS=8.8.8.8
+	DNS=4.2.2.1
+	Address=192.168.1.250/24
+	Gateway=192.168.1.1
+	DHCP=no
+	```
+	
+2. Matikan servis dhcpd jika tidak akan menggunakan sistem dhcp (DHCP=no) dengan perintah :
+	```
+	sudo systemctl stop dhcpcd.service
+	sudo systemctl disable dhcpcd.service
+	```
+
+3. Hidupkan servis **systemd-networkd** dengan :
+	```
+	sudo systemctl enable systemd-networkd
+	sudo systemctl start systemd-networkd
+	```
+	
+4. Hidupkan servis **systemd-resolved** dengan :
+	```
+	sudo systemctl enable systemd-resolved
+	sudo systemctl start systemd-resolved
+	```
+	
+5. Buat symlink sebagai berikut : `sudo ln -fs /run/systemd/resolve/resolv.conf /etc/resolv.conf`
+6. Jika **DHCP=yes** pada file konfigurasi di atas dan servis **dhcpcd** aktif, maka interface akan dapat mendapatkan IP secara dinamik maupun statik secara otomatis.
 
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
