@@ -55,8 +55,11 @@
 2. File konfigurasi di atas dapat dibuat secara otomatis dengan `sudo wifi-menu`. Pastikan wifi cardnya aktif.
 3. Untuk mencoba koneksinya lakukan `sudo netctl start wlan0`. Jika berhasil maka putuskan koneksinya dengan `sudo netctl stop wlan0`.
 3. Untuk kemudahan aktivasi koneksinya maka aktifkan service otomatisnya dengan `sudo systemctl enable netctl-auto@wlan0.service`
+4. Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
  - https://wiki.archlinux.org/index.php/netctl#Automatic_switching_of_profiles
  - http://sciencewalkinggaming.blogspot.com/2012/11/how-to-set-up-arch-linux-on-raspberry.html
+ - https://bbs.archlinux.org/viewtopic.php?id=162582
+ - http://archlinuxarm.org/forum/viewtopic.php?f=58&t=7851
