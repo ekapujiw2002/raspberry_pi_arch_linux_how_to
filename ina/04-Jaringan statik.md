@@ -58,9 +58,16 @@
 3. Untuk kemudahan aktivasi koneksinya maka aktifkan service otomatisnya dengan `sudo systemctl enable netctl-auto@wlan0.service`
 4. Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
+ArchLinux terbaru menggunakan ** systemd-networkd** untuk konfigurasi jaringannya.
+
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
  - https://wiki.archlinux.org/index.php/netctl#Automatic_switching_of_profiles
  - http://sciencewalkinggaming.blogspot.com/2012/11/how-to-set-up-arch-linux-on-raspberry.html
  - https://bbs.archlinux.org/viewtopic.php?id=162582
  - http://archlinuxarm.org/forum/viewtopic.php?f=58&t=7851
+ - http://forum.lemaker.org/thread-5272-1-1-static_ip_config_failed.html
+ - http://dabase.com/blog/Good_riddance_netctl/
+ - https://bbs.archlinux.org/viewtopic.php?id=178625
+ - http://blog.volcanis.me/2014/06/01/systemd-networkd/
+ - 
