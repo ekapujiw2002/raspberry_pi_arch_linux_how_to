@@ -107,4 +107,4 @@ Referensi :
  - http://dabase.com/blog/Good_riddance_netctl/
  - https://bbs.archlinux.org/viewtopic.php?id=178625
  - http://blog.volcanis.me/2014/06/01/systemd-networkd/
- - 
+ - http://www.correderajorge.es/wifi-under-raspberry-pi-with-archlinux/
