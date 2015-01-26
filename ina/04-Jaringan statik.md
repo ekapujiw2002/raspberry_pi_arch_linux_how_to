@@ -98,10 +98,10 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 6. Untuk koneksi via wifi maka lakukan instalasi **wpa-supplicant* dengan : `sudo pacman -S --needed wpa-supplicant`
 7. Buat file konfigurasi untuk wlan0 dengan `sudo nano /etc/systemd/network/wlan0.network` dan isi dengan :
 	```
-	#[Match]
+	[Match]
 	Name=wlan0
 	
-	#[Network]
+	[Network]
 	DHCP=yes
 	#DNS=192.168.1.1
 	#Address=192.168.1.251/24
