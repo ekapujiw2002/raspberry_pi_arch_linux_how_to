@@ -29,7 +29,7 @@
 10.	Kini ip di raspi akan menjadi statik sesuai seting yang telah diset sebelumnya.
 11.	Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
-##Via Wifi
+##B. Via Wifi
 1. Buat file profil wifinya misal **/etc/netctl/wlan0** dengan konten sebagai berikut :
 	```
 	Description='Wireless connection via wlan0'
@@ -58,7 +58,7 @@
 3. Untuk kemudahan aktivasi koneksinya maka aktifkan service otomatisnya dengan `sudo systemctl enable netctl-auto@wlan0.service`
 4. Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
-##SYSTEMD-NETWORKD
+##C. SYSTEMD-NETWORKD
 ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya. Untuk jaringan ethernet pergunakan langkah berikut ini :
 
 1. Buat file konfigurasi misal **/etc/systemd/network/eth0.network** dengan isi sebagai berikut :
@@ -95,7 +95,44 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	```
 	
 5. Buat symlink sebagai berikut : `sudo ln -fs /run/systemd/resolve/resolv.conf /etc/resolv.conf`
-6. Jika **DHCP=yes** pada file konfigurasi di atas dan servis **dhcpcd** aktif, maka interface akan dapat mendapatkan IP secara dinamik maupun statik secara otomatis.
+6. Untuk koneksi via wifi maka lakukan instalasi **wpa-supplicant* dengan : `sudo pacman -S --needed wpa-supplicant`
+7. Buat file konfigurasi untuk wlan0 dengan `sudo nano /etc/systemd/network/wlan0.network` dan isi dengan :
+	```
+	#[Match]
+	Name=wlan0
+	
+	#[Network]
+	DHCP=yes
+	#DNS=192.168.1.1
+	#Address=192.168.1.251/24
+	#Gateway=192.168.1.1
+	```
+	
+8. Jika **DHCP=yes** pada file konfigurasi di atas dan servis **dhcpcd** aktif, maka interface akan dapat mendapatkan IP secara dinamik maupun statik secara otomatis. Untuk ip statis maka set **DHCP=no** dan seting DNS, Address, dan Gateway sesuai setting jaringan yang ada.
+9. Buat file konfigurasi wpa untuk wlan0 dengan `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf` dengan isian sbb :
+	```
+	ctrl_interface=/var/run/wpa_supplicant
+	eapol_version=1
+	ap_scan=1
+	fast_reauth=1
+	
+	network={
+	    ssid="THE_SSID_NAME"
+	    psk="password"
+	    priority=1
+	}
+	#network={
+	#    ssid="Foobar2"
+	#    psk="password2"
+	#    priority=2
+	#}
+	```
+	
+10. Tambahkan SSID sesuai kebutuhan, lebih dari satu juga boleh dengan prioritas yang berbeda. Untuk menambahkannya, bisa mempergunakan perintah `wpa_passphrase <ESSID> <passphrase> >> sudo tee -a wpa_supplicant-wlp2s0.conf`
+11. Tes koneksi wifi dengan perintah `sudo wpa_supplicant -iwlan0 -Dwext -c/etc/wpa_supplicant/wpa_supplicant-wlan0.conf`. Pada langkah ini seharusnya koneksi wifi sudah jalan dan IP wifi raspi bisa di-ping.
+12. Edit file **/usr/lib/systemd/system/wpa_supplicant@.service** dan ubah perintahnya menjadi **ExecStart=/usr/bin/wpa_supplicant -Dwext -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I**
+13. Aktifkan service wlan0 dengan `sudo systemctl enable wpa_supplicant@wlan0` lalu start dengan `sudo systemctl start wpa_supplicant@wlan0`
+14. Dengan metode ini maka koneksi wifi dan ethernet dapat berjalan dengan otomatis ketika sistem boot. Dan secara otomatis wifi akan melakukan roaming ke semua SSID yang ada di dalam **wpa_supplicant-wlan0.conf**
 
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
