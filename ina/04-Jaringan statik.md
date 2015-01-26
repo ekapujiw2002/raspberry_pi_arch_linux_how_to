@@ -73,7 +73,7 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	DNS=4.2.2.1
 	Address=192.168.1.250/24
 	Gateway=192.168.1.1
-	DHCP=no
+	DHCP=both
 	```
 	
 2. Matikan servis dhcpd jika tidak akan menggunakan sistem dhcp (DHCP=no) dengan perintah :
@@ -102,10 +102,10 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	Name=wlan0
 	
 	[Network]
-	DHCP=yes
-	#DNS=192.168.1.1
-	#Address=192.168.1.251/24
-	#Gateway=192.168.1.1
+	DHCP=both
+	DNS=192.168.1.1
+	Address=192.168.1.251/24
+	Gateway=192.168.1.1
 	```
 	
 8. Jika **DHCP=yes** pada file konfigurasi di atas dan servis **dhcpcd** aktif, maka interface akan dapat mendapatkan IP secara dinamik maupun statik secara otomatis. Untuk ip statis maka set **DHCP=no** dan seting DNS, Address, dan Gateway sesuai setting jaringan yang ada.
@@ -133,7 +133,7 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 12. Edit file **/usr/lib/systemd/system/wpa_supplicant@.service** dan ubah perintahnya menjadi **ExecStart=/usr/bin/wpa_supplicant -Dwext -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I**
 13. Aktifkan service wlan0 dengan `sudo systemctl enable wpa_supplicant@wlan0` lalu start dengan `sudo systemctl start wpa_supplicant@wlan0`
 14. Dengan metode ini maka koneksi wifi dan ethernet dapat berjalan dengan otomatis ketika sistem boot. Dan secara otomatis wifi akan melakukan roaming ke semua SSID yang ada di dalam **wpa_supplicant-wlan0.conf**
-15. Jika menggunakan wifi, pastikan eth0 tidak aktif konfigurasi networknya.
+15. Jika menggunakan wifi, pastikan eth0 tidak aktif konfigurasi networknya atau set **DHCP=both** dan pastikan service **dhcpcd** aktif.
 
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
