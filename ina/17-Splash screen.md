@@ -1,5 +1,5 @@
 #CUSTOM SPLASH SCREEN
-1.	Install omxplayer dengan `sudo pacman -S omxplayer`
+1.	Install omxplayer dengan `sudo pacman -S --needed ttf-freefont omxplayer`
 2.	Edit **/boot/cmdline.txt**. 
 3.	Ubah  **console=tty1** ke **console=tty9**
 4.	Tambahkan `quiet` diakhir barisnya
