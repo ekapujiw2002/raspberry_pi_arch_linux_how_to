@@ -40,7 +40,7 @@
 5. Buat sebuah file php di folder **/srv/http/** dan isi dengan : `<?php phpinfo(); ?>`
 6. Restart service httpd dengan `sudo systemctl restart httpd` dan buka file php di atas di browser
 7. Jika diinginkan agar script php dapat mengeksekusi command shell maka tambahkan kode berikut ke file **/etc/sudoers** : `%http ALL=(ALL) NOPASSWD: ALL`
-8. Aktifkan ekstensi **mysql.so**,**sqlite3.so**, dan **mysqli.so** dengan menghilangkan tanda # di file **/etc/php/php.ini**
+8. Aktifkan ekstensi **mysql.so**,**sqlite3.so**,**pdo-mysql**,**pdo-sqlite**, dan **mysqli.so** dengan menghilangkan tanda # di file **/etc/php/php.ini**
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql`
