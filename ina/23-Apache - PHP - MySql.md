@@ -28,7 +28,7 @@
 11. Jika folder document root Apache akan diubah maka pastikan bahwa foldernya telah diset permissionnya dengan benar di file **/etc/httpd/conf/httpd.conf** dan telah di-allow untuk dibuka pada bagian konfigurasi PHP-nya di file **/etc/php/php.ini** section **open_basedir**
 
 ##PHP
-1. Install php dengan `sudo pacman -S php php-apache`
+1. Install php dengan `sudo pacman -S php php-apache php-sqlite`
 2. Edit file **/etc/httpd/conf/httpd.conf** dan tambahkan :
  ```
  LoadModule php5_module modules/libphp5.so
