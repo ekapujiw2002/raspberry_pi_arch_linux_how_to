@@ -13,6 +13,7 @@ Selanjutnya install **LXDE** sebagai engine untuk desktopnya dengan langkah beri
 6.	Run command : `startx`
 7.	Anda akan login ke desktop LXDE
 8.	Untuk menghindari pesan bahwa user konsol yang bisa melakukan startx, maka ketikkan perintah ini : `echo "allowed_users=anybody" > sudo tee -a /etc/X11/Xwrapper.config`
+9.	Untuk menjalankan X secara silent maka pergunakan perintah : `startx > /dev/null 2>&1 &`
 
 Referensi :
 - http://karuppuswamy.com/wordpress/2010/09/26/how-to-fix-x-user-not-authorized-to-run-the-x-server-aborting/
