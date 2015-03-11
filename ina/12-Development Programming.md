@@ -6,7 +6,7 @@ sudo pacman -S --needed base-devel python python2 sqlite tk geany ed python-setu
 ```
 
 Install juga **wiringpi** untuk pemrograman *hardware* :
-    `sudo pacman –S wiringpi`
+    `sudo pacman –S --needed wiringpi`
     
 Dan jangan lupa **OpenCV** untuk pengolahan data visual :
-    `sudo pacman –S opencv opencv-samples eigen eigen2`
+    `sudo pacman –S --needed opencv opencv-samples eigen eigen2`
