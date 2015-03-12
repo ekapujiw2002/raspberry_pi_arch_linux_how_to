@@ -1,6 +1,6 @@
 #KIOSK WEB BROWSER
-1.	Download kweb dari http://steinerdatenbank.de/software/kweb-1.6.2.tar.gz
-2.	Extrak filenya dengan : `tar –xvf kweb-1.6.2.tar.gz`
+1.	Download kweb dari http://steinerdatenbank.de/software/kweb-1.6.3.tar.gz
+2.	Extrak filenya dengan : `tar –xvf kweb-1.6.3.tar.gz`
 3.	Install webkitgtk : `sudo pacman –S webkitgtk`
 4.	Install unclutter : `sudo pacman –S unclutter`
 5.	Buat sebuah folder di dalam home direktori semisal **kweb_kiosk**. Kopikan file kweb ke folder ini. Selain itu buatlah sebuah file bash misal **kiosk.sh** dengan konten sebagai berikut :
@@ -46,3 +46,4 @@ Referensi :
 - http://ledgerlabs.us/raspberrypi/fast-web-browser-wyoutube-functionality/
 - http://blogs.wcode.org/2013/09/howto-boot-your-raspberry-pi-into-a-fullscreen-browser-kiosk/
 - http://www.pricelessgeek.com/2013/08/ultimate-how-to-raspberry-pi-web-kiosk.html#.U1hvNFWSwpk
+- http://www.thegeekstuff.com/2010/04/view-and-extract-packages/
