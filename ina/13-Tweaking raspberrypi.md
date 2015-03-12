@@ -67,7 +67,15 @@
  alias pi_cpu_ondemand_freq='echo -n ondemand | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor'
  ```
 
-12.	*Reboot* dengan : `sudo shutdown –r now`
+12. Untuk membuat raspi selalu menyala layar konsolnya maka tambahkan ini di **.bashrc** :
+ ```
+ #disable screen sleep
+ setterm -blank 0 -powerdown 0 -powersave off > /dev/null 2>&1
+ ```
+ 
+13. Lalu login sebagai **root** dengan perintah `su` dan jalankan perintah ini `echo -ne "\033[9;0]" >> /etc/issue`
+
+14.	*Reboot* dengan : `sudo shutdown –r now`
 
 Referensi :
 - http://raspberrypi.stackexchange.com/questions/7332/what-is-the-difference-between-cea-and-dmt
