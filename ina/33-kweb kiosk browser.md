@@ -1,6 +1,6 @@
 #KIOSK WEB BROWSER
 1.	Download kweb dari http://steinerdatenbank.de/software/kweb-1.6.3.tar.gz
-2.	Extrak filenya dengan : `tar –xvf kweb-1.6.3.tar.gz`. Lalu ekstrak file **kweb_1.6.3-1_armhf.deb** dengan perintah `ar -vx kweb_1.6.3-1_armhf.deb` diikuti dengan `tar -xvzf data.tar.gz`
+2.	Extrak filenya dengan : `tar –xvf kweb-1.6.3.tar.gz`. Lalu ekstrak file **kweb_1.6.3-1_armhf.deb** dengan perintah `ar -vx kweb_1.6.3-1_armhf.deb` diikuti dengan `tar -xvzf data.tar.gz`. Kita hanya membutuhkan file **usr/bin/kweb** dan **usr/bin/kweb3**
 3.	Install webkitgtk : `sudo pacman –S webkitgtk`
 4.	Install unclutter : `sudo pacman –S unclutter`
 5.	Buat sebuah folder di dalam home direktori semisal **kweb_kiosk**. Kopikan file kweb ke folder ini. Selain itu buatlah sebuah file bash misal **kiosk.sh** dengan konten sebagai berikut :
