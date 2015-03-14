@@ -1,5 +1,5 @@
 #INSTALASI ARCH LINUX ARM RPI
-1. Download image dari http://archlinuxarm.org/platforms/armv6/raspberry-pi dan burn arch linux ke mmc dengan win32 disk     imager dari http://sourceforge.net/projects/win32diskimager/
+1. Download image dari http://archlinuxarm.org/platforms/armv6/raspberry-pi -- tidak menyediakan image lagi --, download dari sini http://downloads.raspberrypi.org/arch/images/arch-2014-06-22/ dan burn arch linux ke mmc dengan win32 disk     imager dari http://sourceforge.net/projects/win32diskimager/
 2. Setelah selesai, maka set ip raspberry pi ke mode statik dg cara sbb :
 3. Buka file **cmdline.txt** pada sdcard
 4. Tambahkan sintak berikut pada baris yang sama. Harus 1 baris!!!
