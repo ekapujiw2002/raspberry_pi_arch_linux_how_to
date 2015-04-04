@@ -43,7 +43,12 @@
 	
 	# Get file size and type
 	file_size = os.path.getsize(fh.name)
-	file_type = magic.Magic(mime=True).from_file(fh.name)
+	#file_type = magic.Magic(mime=True).from_file(fh.name)
+	
+	#http://stackoverflow.com/questions/43580/how-to-find-the-mime-type-of-a-file-in-python
+	m = magic.open(magic.MAGIC_MIME)
+	m.load()
+	file_type = m.file(fh.name)
 	
 	# Create a Google Docs client
 	docsclient = gdata.docs.client.DocsClient(source='planzero-gupload-v0.1')
