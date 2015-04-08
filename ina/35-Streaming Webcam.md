@@ -29,3 +29,4 @@
 
 Referensi:
  - http://www.linuxcircle.com/2013/02/06/faster-video-streaming-on-raspberry-media-server-with-mjpg-streamer/
+ - http://stackoverflow.com/questions/22575532/how-to-take-picture-with-mjpg-streamer
