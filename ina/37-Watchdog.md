@@ -13,8 +13,11 @@ Watchdog merupakan fitur yang sangat berguna untuk membuat sistem tetap on trus,
     d. Pastikan item **realtime** dan **priority** diaktifkan  
 5. Start watchdog dengan perintah : ```sudo systemctl start watchdog``` . Cek hasilnya dengan ```sudo systemctl status watchdog```. Seharusnya tidak ada eror.  
 6. Aktifkan watchdog sebagai service sistem dengan : ```sudo systemctl enable watchdog```
+7. Untuk menguji watchdog maka pergunakan fork bomb berikut ini : `: (){ :|:& };:`
 
 Referensi :  
 - http://vk5tu.livejournal.com/35721.html
 - http://www.bayerschmidt.com/raspberry-pi/89-auto-reboot-a-hung-raspberry-pi-using-the-on-board-watchdog-timer.html
 - http://blog.ricardoarturocabral.com/2013/01/auto-reboot-hung-raspberry-pi-using-on.html
+- http://ictoblog.nl/raspberry-pi/raspberry-pi-auto-reset-with-mail-notification
+- http://www.domoticz.com/wiki/Setting_up_the_raspberry_pi_watchdog
