@@ -44,7 +44,7 @@
 
 ##MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql perl-dbd-mysql`
-2. Start mysql server dengan : `sudo systemctl start mysqld`. Untuk menghidupkan server MySQL pada saat boot, maka lakukan  `sudo systemctl enable mysqld`
+2. Jalankan perintah `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql` untuk menginisialisasi database mysql. Start mysql server dengan : `sudo systemctl start mysqld`. Untuk menghidupkan server MySQL pada saat boot, maka lakukan  `sudo systemctl enable mysqld`
 3. Jika mysql server tidak dapat dijalankan, maka edit file **/etc/mysql/my.cnf** dan hilangkan tanda # di depan smua innodb. Lalu delete file **/var/lib/mysql/ibdata1**
 4.	Ubah default ke myisam dengan menambahkan opsi berikut ke **my.cnf** :
 
