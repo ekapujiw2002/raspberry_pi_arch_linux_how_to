@@ -12,3 +12,4 @@ Ada kalanya dibutuhkan swap file untuk sistemnya, maka ikuti langkah berikut ini
 
 Referensi :
 - http://www.adminempire.com/how-to-add-a-swap-file-on-arch-linux/
+- https://mul14.wordpress.com/2008/11/17/membuat-file-swap-di-linux-bukan-partisi/
