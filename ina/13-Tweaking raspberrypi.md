@@ -80,3 +80,4 @@
 Referensi :
 - http://raspberrypi.stackexchange.com/questions/7332/what-is-the-difference-between-cea-and-dmt
 - http://ananddrs.com/2013/09/18/rpi-hide-boot-msg/
+- http://ananddrs.com/2013/09/25/rpi-onscreen-keyboard/
