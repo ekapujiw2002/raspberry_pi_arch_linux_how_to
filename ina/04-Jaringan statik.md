@@ -128,7 +128,7 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	#}
 	```
 	
-10. Tambahkan SSID sesuai kebutuhan, lebih dari satu juga boleh dengan prioritas yang berbeda. Untuk menambahkannya, bisa mempergunakan perintah `wpa_passphrase <ESSID> <passphrase> >> sudo tee -a wpa_supplicant-wlp2s0.conf`
+10. Tambahkan SSID sesuai kebutuhan, lebih dari satu juga boleh dengan prioritas yang berbeda. Untuk menambahkannya, bisa mempergunakan perintah `wpa_passphrase <ESSID> <passphrase> >> sudo tee -a wpa_supplicant-wlan0.conf`
 11. Tes koneksi wifi dengan perintah `sudo wpa_supplicant -iwlan0 -Dwext -c/etc/wpa_supplicant/wpa_supplicant-wlan0.conf`. Pada langkah ini seharusnya koneksi wifi sudah jalan dan IP wifi raspi bisa di-ping.
 12. Edit file **/usr/lib/systemd/system/wpa_supplicant@.service** dan ubah perintahnya menjadi **ExecStart=/usr/bin/wpa_supplicant -Dwext -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I**
 13. Aktifkan service wlan0 dengan `sudo systemctl enable wpa_supplicant@wlan0` lalu start dengan `sudo systemctl start wpa_supplicant@wlan0`
