@@ -95,7 +95,7 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	```
 	
 5. Buat symlink sebagai berikut : `sudo ln -fs /run/systemd/resolve/resolv.conf /etc/resolv.conf`
-6. Untuk koneksi via wifi maka lakukan instalasi **wpa-supplicant* dengan : `sudo pacman -S --needed wpa-supplicant`
+6. Untuk koneksi via wifi maka lakukan instalasi **wpa-supplicant* dengan : `sudo pacman -S --needed wpa_supplicant`
 7. Buat file konfigurasi untuk wlan0 dengan `sudo nano /etc/systemd/network/wlan0.network` dan isi dengan :
 	```
 	[Match]
