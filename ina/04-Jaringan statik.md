@@ -73,7 +73,7 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	DNS=4.2.2.1
 	Address=192.168.1.250/24
 	Gateway=192.168.1.1
-	DHCP=both
+	DHCP=yes
 	```
 	
 2. Matikan servis dhcpd jika tidak akan menggunakan sistem dhcp (DHCP=no) dengan perintah :
@@ -102,7 +102,7 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 	Name=wlan0
 	
 	[Network]
-	DHCP=both
+	DHCP=yes
 	DNS=192.168.1.1
 	Address=192.168.1.251/24
 	Gateway=192.168.1.1
