@@ -15,3 +15,6 @@
 5. Untuk melihat vnc yang jalan, maka pergunakan : `vncserver -list`
 6. Untuk mematikan vnc pada sebuah port maka pergunakan : `vncserver -kill :nomor_vnc`
 7. Untuk koneksi ke server vnc maka pergunakan vnc klien misal 'TightVNC' dan konek ke server vnc di alamat ip:590x
+
+Referensi :
+- https://wiki.archlinux.org/index.php/TigerVNC
