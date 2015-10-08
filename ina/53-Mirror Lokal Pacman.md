@@ -1,7 +1,7 @@
 #Local Mirror Pacman
 
 1. Untuk membuat mirror lokal pacman maka disarankan dipergunakan cache package pacman yang sudah pada suatu mesin untuk dishare via sebuah web server. Untuk mendownload paket pacman yang fresh maka pergunakan perintah ini sebagai root : `pacman -Q | cut -f1 -d' ' > packages.txt`
-2. Sinkronisasi paket pacman terlebih dahulu dengan : `sudo pacman -Syy`
+2. Sinkronisasi paket pacman terlebih dahulu dengan : `sudo pacman -Syy` . Lalu bersihkan paket yang versi lama dengan : `sudo pacman -Sc`
 3. Download dan atau hilangkan dulu paket-paket yang invalid sesuai hasil dari : `pacman -Sw $(cat packages.txt)`
 4. Tunggu sampai proses download selesai.
 5. Install darkhttpd dengan : `sudo pacman -S --needed darkhttpd`
