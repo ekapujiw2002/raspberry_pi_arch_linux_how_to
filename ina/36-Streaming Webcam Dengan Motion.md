@@ -47,3 +47,4 @@ Referensi:
  - http://jeremyblythe.blogspot.co.uk/2012/06/battery-powered-wireless-motion.html
  - https://learn.adafruit.com/raspberry-pi-garage-door-opener/motion-setup
  - http://pingbin.com/2012/12/raspberry-pi-web-cam-server-motion/
+ - http://sourceforge.net/p/mjpg-streamer/discussion/739917/thread/a9c674a0
