@@ -120,3 +120,4 @@ Referensi :
  - https://wiki.archlinux.org/index.php/Software_access_point
  - http://anarsoul.blogspot.com/2013/08/access-point-with-raspberry-pi-and.html
  - http://raspberry-at-home.com/hotspot-wifi-access-point/
+ - http://jason.the-graham.com/2013/03/06/how-to-use-systemd-timers/
