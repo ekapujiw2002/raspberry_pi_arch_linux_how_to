@@ -1,5 +1,12 @@
 #Udev
 
+#raspicam
+KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux",  ATTR{name}=="camera0", SYMLINK+="video-raspicam", GROUP="video"
+
+#usb webcam
+KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux", SUBSYSTEMS=="usb", ATTRS{idProduct}=="3399", ATTRS{idVendor}=="18ec", SYMLINK+="video-webcam1", GROUP="video"
+KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux", SUBSYSTEMS=="usb", ATTRS{idProduct}=="3450", ATTRS{idVendor}=="0ac8", SYMLINK+="video-webcam2", GROUP="video"
+
 Referensi :
 - http://www.linuxquestions.org/questions/linux-general-1/udev-rules-to-differentiate-between-multiple-identical-devices-822879/
 - http://www.reactivated.net/writing_udev_rules.html
