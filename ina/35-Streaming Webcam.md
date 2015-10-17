@@ -32,3 +32,4 @@ Referensi:
  - http://stackoverflow.com/questions/22575532/how-to-take-picture-with-mjpg-streamer
  - http://skillfulness.blogspot.co.id/2010/03/mjpg-streamer-documentation.html
  - http://www.madox.net/blog/2013/02/23/tl-wr703n-example-project-4-webcam-streaming/
+ - http://sourceforge.net/p/mjpg-streamer/discussion/739917/thread/a9c674a0
