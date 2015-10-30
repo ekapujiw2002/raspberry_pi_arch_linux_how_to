@@ -111,3 +111,4 @@ done
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
  - http://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
+ - https://www.codeenigma.com/community/blog/installing-3g-usb-modems-linux
