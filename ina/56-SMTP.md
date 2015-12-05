@@ -224,6 +224,7 @@
   ```
 4. Kalau tidak ingin panjang seperti itu, maka hilangkan opsi **-v** di perintahnya
 5. Perintah tanpa **-v** akan langsng kembali ke konsol, jika ingin menunggu status hasil pengiriman, maka pergunakan opsi **-Ssendwait**
+6. Untuk mengirim email dengan attachment maka gunakan opsi **a**. Opsi ini bisa dipergunakan untuk mengirim lebih dari 1 attachment sekaligus seperti contoh berikut ini : `echo test lagi gan pada `date` dengan attachment | mail -a tes.log -a slime.swf -s "testing ssmtp setup" -Ssendwait ekapujiw2002@gmail.com`
 
 Referensi :
 - https://wiki.archlinux.org/index.php/SSMTP
