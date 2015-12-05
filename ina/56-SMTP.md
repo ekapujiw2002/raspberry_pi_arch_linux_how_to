@@ -1,6 +1,6 @@
 #SMTP Relay Server
-1. Install paket 'ssmtp' dengan `sudo pacman -S --needed ssmtp`
-2. Edit file konfigurasinya di '/etc/ssmtp/ssmtp.conf' dan isi sesuai seting server SMTP yang akan dipergunakan. Untuk contoh ini maka dipergunakan server GMail dengan username xxx dan password 1234 :
+1. Install paket **ssmtp** dengan `sudo pacman -S --needed ssmtp`
+2. Edit file konfigurasinya di **/etc/ssmtp/ssmtp.conf** dan isi sesuai seting server SMTP yang akan dipergunakan. Untuk contoh ini maka dipergunakan server GMail dengan username xxx dan password 1234 :
   ```
   # The user that gets all the mails (UID < 1000, usually the admin)
   root=xxx@gmail.com
@@ -26,7 +26,7 @@
   # Email 'From header's can override the default domain?
   FromLineOverride=yes
   ```
-3. Tes email dengan kirim email misal ke ekapujiw2002@gmail.com dengan perintah : `echo test | mail -v -s "testing ssmtp setup" ekapujiw2002@gmail.com` sehingga akan menghasilkan respon kalau sukses sebagai berikut :
+3. Tes email dengan kirim email misal ke **ekapujiw2002@gmail.com** dengan perintah : `echo test | mail -v -s "testing ssmtp setup" ekapujiw2002@gmail.com` sehingga akan menghasilkan respon kalau sukses sebagai berikut :
   ```
   [raspi@raspiku ~]$ echo test | mail -v -s "testing ssmtp setup" ekapujiw2002@gmail.com
   LOAD 15 bytes <#@ /etc/mail.rc>
@@ -222,8 +222,8 @@
   [<-] 221 2.0.0 closing connection wo3sm21564421pab.25 - gsmtp
   [raspi@raspiku ~]$
   ```
-4. Kalau tidak ingin panjang seperti itu, maka hilangkan opsi '-v' di perintahnya
-5. 
+4. Kalau tidak ingin panjang seperti itu, maka hilangkan opsi **-v** di perintahnya
+5. Perintah tanpa **-v** akan langsng kembali ke konsol, jika ingin menunggu status hasil pengiriman, maka pergunakan opsi **-Ssendwait**
 
 Referensi :
 - https://wiki.archlinux.org/index.php/SSMTP
