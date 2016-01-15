@@ -6,7 +6,7 @@ Untuk membuat server VOIP berbasis Mumble di Arch Linux (Raspbian ikuti link di 
 2. Reload sistem DBUS dengan `sudo systemctl reload dbus`
 3. Edit file konfigurasinya dengan `sudo nano /etc/murmur.ini` dan konfigurasi beberapa item berikut ini :
   - **database=/data/murmur/murmur.sqlite** : Untuk menyimpan konfigurasi user dan sistem server
-  - **welcometext="<br />Welcome <b>Murmur Server</b>.<br />Get ready to Mumble....<br />"** : Menampilkan pesan ketika user mengakses server
+  - **welcometext="Welcome <b>Murmur Server</b>. Get ready to Mumble...."** : Menampilkan pesan ketika user mengakses server
   - **port=64738** : Port untuk server Mumble. Pastikan port ini tidak dipakai program lainnya.
   - **host=0.0.0.0** : IP untuk server Mumble. Pastikan diisi dengan 0.0.0.0 . Ini masih buggy kalau dibiarkan kosong
   - **serverpassword=mdpvoip** : Password bagi user yang akan masuk ke server
