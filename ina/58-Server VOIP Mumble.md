@@ -13,7 +13,7 @@ Untuk membuat server VOIP berbasis Mumble di Arch Linux (Raspbian ikuti link di 
   - **users=200** : Jumlah maksimal pengguna yang bisa online di server dalam satu waktu. Sangat bergantung kemampuan hardware server dan bandwidth jaringan yang tersedia
   - **registerName=XXX MUMBLE VOIP SERVER** : Nama servernya
 4. Start server dengan `sudo systemctl start murmur` dan buat otomatis jalan saat boot dengan `sudo systemctl enable murmur`
-5. Cek server murmur apakah sudah online dengan `sudo netstat -tulpn`
+5. Cek server murmur apakah sudah online dengan `sudo netstat -tulpn` . Untuk login ke murmur sebagai root gunakan akun **superuser** dengan password sesuai langkah nomor 2.
 6. Konek ke server menggunakan Mumble client misal Plumble untuk Android dan Mumble untuk OS lainnya.
 
 Selamat ber-VOIP ria
