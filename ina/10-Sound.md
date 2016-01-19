@@ -15,5 +15,5 @@ Untuk Arch Linux Arm versi terbaru maka edit file **/etc/modules-load.d/raspberr
 
 Referensi :
 - https://bbs.archlinux.org/viewtopic.php?id=124380
-- https://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture
+- https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture
 - http://superuser.com/questions/626606/how-to-make-alsa-pick-a-preferred-sound-device-automatically
