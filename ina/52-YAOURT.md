@@ -23,3 +23,4 @@
 
 Referensi :
 - https://astrofloyd.wordpress.com/2015/01/17/installing-yaourt-on-arch-linux/
+- http://thestandardoutput.com/posts/fixing-package-query-to-pacman-dependency-in-arch/
