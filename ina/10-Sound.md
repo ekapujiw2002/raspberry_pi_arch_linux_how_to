@@ -17,3 +17,5 @@ Referensi :
 - https://bbs.archlinux.org/viewtopic.php?id=124380
 - https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture
 - http://superuser.com/questions/626606/how-to-make-alsa-pick-a-preferred-sound-device-automatically
+- http://blog.scphillips.com/posts/2013/01/sound-configuration-on-raspberry-pi-with-alsa/
+- http://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
