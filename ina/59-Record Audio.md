@@ -11,8 +11,9 @@ Subdevices: 1/1
 Subdevice #0: subdevice #0
   ```
 
-4. Uji perekaman audio dengan perintah `arecord -D plughw:2,0 --duration=10 -f S16_LE -c1 -r44100 -vv ~/rec.wav` . Lalu play menggunakan aplay. Jika ok, maka lanjutkan ke step selanjutnya. Plughw sesuaikan dengan hasil step 3 ( Card 2, device 0).
-5. 
+4. Uji perekaman audio dengan perintah `arecord -D plughw:2,0 --duration=10 -f S16_LE -c1 -r44100 -vv ~/rec.wav` . Lalu play menggunakan **aplay**. Jika ok, maka lanjutkan ke step selanjutnya. Plughw sesuaikan dengan hasil step 3 ( Card 2, device 0).
+5. Untuk merekam dalam format lain misal MP3, maka install program **lame** dan lakukan proses perekaman audio dengan perintah seperti berikut ini : `arecord -D plughw:2,0 --duration=10 -q -f cd -t raw | lame -r - output.mp3`
+6. Hepi recording :)
 
 Referensi :
 - http://mocha.freeshell.org/audio.html
