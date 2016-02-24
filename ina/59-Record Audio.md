@@ -11,7 +11,8 @@ Subdevices: 1/1
 Subdevice #0: subdevice #0
   ```
 
-4. 
+4. Uji perekaman audio dengan perintah `arecord -D plughw:2,0 --duration=10 -f S16_LE -c1 -r44100 -vv ~/rec.wav` . Lalu play menggunakan aplay. Jika ok, maka lanjutkan ke step selanjutnya. Plughw sesuaikan dengan hasil step 3 ( Card 2, device 0).
+5. 
 
 Referensi :
 - http://mocha.freeshell.org/audio.html
