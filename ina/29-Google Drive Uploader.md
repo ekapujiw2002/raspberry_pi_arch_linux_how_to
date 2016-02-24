@@ -98,7 +98,9 @@
 	```
 
 5.	Tambahkan mode executable ke filenya dan run dengan sintaks : `./gdrive.py <nama file lokal> <nama folder GDrive>`
+6.	Untuk versi terbaru bisa memakai aplikasi gdrive dari https://github.com/prasmussen/gdrive
 
 Referensi :
 -	http://planzero.org/blog/2012/04/13/uploading_any_file_to_google_docs_with_python
 -	http://jeremyblythe.blogspot.com/2012/06/motion-google-drive-uploader-and.html
+-	https://github.com/prasmussen/gdrive
