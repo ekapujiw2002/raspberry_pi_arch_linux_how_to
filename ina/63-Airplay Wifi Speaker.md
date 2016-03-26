@@ -27,27 +27,27 @@
 
 5. Jika akan diset speaker default sistem ke USB AUDIO maka ubah file **/etc/asound.conf** menjadi berikut ini lalu reboot :
 
-```
-pcm.!default {
-  type plug
-  slave {
-    pcm "hw:1,0"
+  ```
+  pcm.!default {
+    type plug
+    slave {
+      pcm "hw:1,0"
+    }
   }
-}
-ctl.!default {
-  type hw
-  card 1
-}
-```
+  ctl.!default {
+    type hw
+    card 1
+  }
+  ```
 
 6. Edit file **/etc/shairport-sync.conf** dan ubah konfigurasinya, misal sebagai berikut :
 
-```
-general =
-{
-    name="RPI ShairPort";
-}
-```
+  ```
+  general =
+  {
+      name="RPI ShairPort";
+  }
+  ```
 
 7. Jalankan **shairport-sync** dengan perintah `shairport-sync -vvv` maka shairport akan aktif dan siap menerima stream dengan protokol airplay. Jika akan menggunakan Android maka pergunakan app misal All Connect (https://play.google.com/store/apps/details?id=com.tuxera.streambels&hl=en) untuk mengetesnya. Untuk Mac device umumnya sudah support by default.
 8. Jika sudah terkoneksi dan stream ok, maka hidupan service shairport dengan `sudo systemctl enable shairport-sync`
