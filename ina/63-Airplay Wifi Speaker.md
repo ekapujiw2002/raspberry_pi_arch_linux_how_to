@@ -55,5 +55,8 @@
 Referensi :
 - http://blog.scphillips.com/posts/2013/01/sound-configuration-on-raspberry-pi-with-alsa/
 - http://yuenhoe.com/blog/2014/04/selecting-alsas-default-sound-card/
-- https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Set_the_default_sound_card
-- 
+- https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture
+- https://github.com/mikebrady/shairport-sync/issues/167
+- https://github.com/mikebrady/shairport-sync
+- http://mattshirley.com/adding-airplay-to-an-external-usb-audio-interface
+- http://www.hagensieker.com/styled-30/index.html
