@@ -60,3 +60,14 @@ Referensi :
 - https://github.com/mikebrady/shairport-sync
 - http://mattshirley.com/adding-airplay-to-an-external-usb-audio-interface
 - http://www.hagensieker.com/styled-30/index.html
+- http://engineer.john-whittington.co.uk/2013/05/airpi-diy-airplay-speakers-using-shairport-and-a-raspberry-pi-updated/
+- http://orsontyrell.blogspot.co.id/2013/11/airplay-to-arch-linux-raspberry-pi-via.html
+- http://www.instructables.com/id/QBee-AirPlay-MPD-integrated-speaker-Raspberry-Pi-s/?ALLSTEPS
+- http://lifehacker.com/5978594/turn-a-raspberry-pi-into-an-airplay-receiver-for-streaming-music-in-your-living-room
+- http://arstechnica.com/information-technology/2013/04/airplaying-music-and-video-from-ipad-to-raspberry-pi-its-as-easy-as/
+- http://www.instructables.com/id/raspbAIRy-the-RaspberryPi-based-Airplay-speaker/?ALLSTEPS
+- http://www.instructables.com/id/Raspberry-Pi-BluetoothAirplay-Audio-Receiver-combo/?ALLSTEPS
+- http://makezine.com/projects/raspberry-pi-airplay-speaker/
+- http://raspberrypihq.com/how-to-turn-your-raspberry-pi-into-a-airplay-receiver-to-stream-music-from-your-iphone/
+- http://drewlustro.com/hi-fi-audio-via-airplay-on-raspberry-pi/
+- 
