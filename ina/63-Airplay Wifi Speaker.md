@@ -70,3 +70,5 @@ Referensi :
 - http://makezine.com/projects/raspberry-pi-airplay-speaker/
 - http://raspberrypihq.com/how-to-turn-your-raspberry-pi-into-a-airplay-receiver-to-stream-music-from-your-iphone/
 - http://drewlustro.com/hi-fi-audio-via-airplay-on-raspberry-pi/
+- https://zignar.net/2016/03/01/home-audio-hifi-berry-and-raspberry-pi/
+- https://delx.net.au/blog/2014/01/bluetooth-audio-a2dp-receiver-raspberry-pi/
