@@ -8,7 +8,7 @@ Untuk membuat Raspberry Pi bisa mengeluarkan suara seperti manusia maka ada bebe
 2. Festival
   - GPL, offline, suara seperti robot. 
   - Untuk instalasi di Raspbian `sudo apt-get install festival`. 
-  - Untuk instalasi di Arch Linux `sudo pacman -S --needed festival`. 
+  - Untuk instalasi di Arch Linux `sudo pacman -S --needed festival festival-english festival-us`. 
   - Untuk menjalankannya pergunakan perintah `echo “Just what do you think you're doing, Dave?” | festival --tts` atau `hostname -I | festival --tts`
   
 3. Espeak
@@ -32,3 +32,4 @@ Referensi :
 - http://rpihome.blogspot.co.id/2015/02/installing-pico-tts.html
 - http://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)
 - http://danfountain.com/2013/03/raspberry-pi-text-to-speech/
+- https://wiki.archlinux.org/index.php/Festival
