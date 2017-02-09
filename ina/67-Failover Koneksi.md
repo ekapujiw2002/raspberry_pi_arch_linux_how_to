@@ -86,31 +86,31 @@ Di atas merupakan kondisi di mana **eth0** *down* tapi sistem masih bisa terkone
   [Network]
   Bond=bond0
   ```
-7. Restart sistemnya. Akan didapatkan hasil interface dengan perintah `ip a` dan routing dengan perintah `ip route` sebagai berikut :
-```
-[traper@qpi2 ~]$ ip a
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host
-       valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc fq_codel master bond0 state UP group default qlen 1000
-    link/ether b8:27:eb:04:17:7b brd ff:ff:ff:ff:ff:ff
-3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether b8:27:eb:51:42:2e brd ff:ff:ff:ff:ff:ff
-    inet6 fe80::ba27:ebff:fe51:422e/64 scope link
-       valid_lft forever preferred_lft forever
-4: bond0: <BROADCAST,MULTICAST,MASTER,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether b8:27:eb:04:17:7b brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.252/24 brd 192.168.1.255 scope global bond0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::ba27:ebff:fe04:177b/64 scope link
-       valid_lft forever preferred_lft forever
-[traper@qpi2 ~]$ ip route
-default via 192.168.1.1 dev bond0 proto static
-192.168.1.0/24 dev bond0 proto kernel scope link src 192.168.1.252
-```
+7. Set semua interface ke **DOWN** dengan `sudo ip link set dev eth0 down` dan `sudo ip link set dev wlan0 down`. Akan didapatkan hasil interface dengan perintah `ip a` dan routing dengan perintah `ip route` sebagai berikut :
+
+  ```
+  [traper@qpi2 ~]$ ip a
+  1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+      link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+      inet 127.0.0.1/8 scope host lo
+         valid_lft forever preferred_lft forever
+      inet6 ::1/128 scope host
+         valid_lft forever preferred_lft forever
+  2: eth0: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc fq_codel master bond0 state UP group default qlen 1000
+      link/ether b8:27:eb:04:17:7b brd ff:ff:ff:ff:ff:ff
+  3: wlan0: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc fq_codel master bond0 state UP group default qlen 1000
+      link/ether b8:27:eb:04:17:7b brd ff:ff:ff:ff:ff:ff
+  4: bond0: <BROADCAST,MULTICAST,MASTER,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+      link/ether b8:27:eb:04:17:7b brd ff:ff:ff:ff:ff:ff
+      inet 192.168.1.40/24 brd 192.168.1.255 scope global bond0
+         valid_lft forever preferred_lft forever
+      inet6 fe80::ba27:ebff:fe04:177b/64 scope link
+         valid_lft forever preferred_lft forever
+  [traper@qpi2 ~]$ ip route
+  default via 192.168.1.1 dev bond0 proto static
+  192.168.1.0/24 dev bond0 proto kernel scope link src 192.168.1.40
+  ```
+8. Reboot sistem dan coba untuk memutuskan baik ethernet maupun wifi. Sistem akan selalu terkoneksi ke jaringan.
 
 Referensi :
 - https://bbs.archlinux.org/viewtopic.php?id=195348
