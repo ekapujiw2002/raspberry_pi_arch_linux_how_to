@@ -114,3 +114,6 @@ Di atas merupakan kondisi di mana **eth0** *down* tapi sistem masih bisa terkone
 
 Referensi :
 - https://bbs.archlinux.org/viewtopic.php?id=195348
+- https://tleichtle.de/projects/bonding/bonding-howto.html
+- https://bugs.freedesktop.org/show_bug.cgi?id=89811
+- https://visibilityspots.org/wireless-bond-archlinux.html
