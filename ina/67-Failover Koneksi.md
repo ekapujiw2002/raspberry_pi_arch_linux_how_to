@@ -112,6 +112,15 @@ Di atas merupakan kondisi di mana **eth0** *down* tapi sistem masih bisa terkone
   ```
 8. Reboot sistem dan coba untuk memutuskan baik ethernet maupun wifi. Sistem akan selalu terkoneksi ke jaringan.
 
+Note :
+- Jalankan `sudo systemctl edit wpa_supplicant@wlan0`
+- Isi dengan :
+```
+[Unit]
+Requires=systemd-networkd.service
+After=systemd-networkd.service
+```
+
 Referensi :
 - https://bbs.archlinux.org/viewtopic.php?id=195348
 - https://tleichtle.de/projects/bonding/bonding-howto.html
