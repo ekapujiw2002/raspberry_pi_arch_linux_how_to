@@ -147,3 +147,4 @@ Referensi :
  - http://blog.volcanis.me/2014/06/01/systemd-networkd/
  - http://www.correderajorge.es/wifi-under-raspberry-pi-with-archlinux/
  - https://bbs.archlinux.org/viewtopic.php?id=185508
+ - https://bbs.archlinux.org/viewtopic.php?pid=1392921#p1392921
