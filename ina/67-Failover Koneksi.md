@@ -1,14 +1,14 @@
-#Failover Koneksi
+# Failover Koneksi
 *Failover* koneksi sangat dibutuhkan jika tidak diinginkan sistem Anda terputus servisnya. Skenarionya yaitu bahwa Anda punya beberapa macam koneksi ke *device* yang sama, dan diinginkan sistem secara otomatis melakukan proses *switching* koneksi jika koneksi utama terputus. Di sini akan paparkan 2 macam cara yang bisa dilakukan.
 
-##SKENARIO
+## SKENARIO
 - OS : Arch Linux ARM dengan systemd
 - Koneksi tersedia sebagai berikut dengan *gateway* 192.168.1.1 :
   - Ethernet via **eth0** (192.168.1.252/24)
   - Wifi via **wlan0** (192.168.1.25/24)
 - Tujuan : sistem tetap bisa terkoneksi meskipun salah satu interface mati
 
-##METODE STANDAR
+## METODE STANDAR
 1. Buat file konfigurasi untuk **eth0**. Simpan sebagai */etc/systemd/network/eth0.network*
   ```
   [Match]
@@ -45,7 +45,7 @@
 Di atas merupakan kondisi di mana **eth0** *down* tapi sistem masih bisa terkoneksi via **wlan0**
 6. Hal yang sama akan terjadi kalau **wlan0** putus, maka sistem akan terkoneksi via **eth0**. Proses switchingnya membutuhkan waktu memang agak lama dalam pengujian yang dilakukan. Tetapi proses autoswitching connection telah dapat dilakukan secara otomatis hanya dengan mengkonfigurasikan interface yang dipergunakan sistemnya.
 
-##CONNECTION BONDING
+## CONNECTION BONDING
 *Bonding* merupakan proses menggabungkan 2 atau lebih interface ke dalam 1 buah interface virtual yang akan melakukan proses koneksi ke jaringan yang ada. Proses ini lebih kompleks, tapi membuat sistem tetap dikenal dengan IP yang sama walopun interfacenya berbeda beda. Kalau dalam cara standar maka IP nya berbeda-beda sesuai dengan interface yang aktif.
 
 1. Update repo lokal dengan `sudo pacman -Syy`
