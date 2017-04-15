@@ -135,6 +135,24 @@ ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya
 14. Dengan metode ini maka koneksi wifi dan ethernet dapat berjalan dengan otomatis ketika sistem boot. Dan secara otomatis wifi akan melakukan roaming ke semua SSID yang ada di dalam **wpa_supplicant-wlan0.conf**
 15. Jika menggunakan wifi, pastikan eth0 tidak aktif konfigurasi networknya.
 
+Note untuk wifi
+
+wifi-menu is the arch-supplied ncurses interface for netctl, it is installed as standard in the base package by pacstrap.
+I had similar problems when dhcpcd updated and I ended up disabling netctl, wpa_supplicant & dhcpcd via systemctl.
+You could try deleting your /etc/wpa_supplicant.conf and then generate a new /etc/wpa_supplicant.conf (from the wiki):
+
+# echo 'ctrl_interface=DIR=/run/wpa_supplicant' > /etc/wpa_supplicant.conf
+# wpa_passphrase <ssid> <passphrase> >> /etc/wpa_supplicant.conf
+
+I bring up the connection in my ~/.xinitrc with:
+
+sudo ip link set <interface> up
+sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i <interface>
+sudo dhcpcd <interface>
+
+Hope this is of some use...
+
+
 Referensi :
  - http://blog.pixxis.be/post/77298179924/setting-up-a-static-ip-on-arch-linux
  - https://wiki.archlinux.org/index.php/netctl#Automatic_switching_of_profiles
