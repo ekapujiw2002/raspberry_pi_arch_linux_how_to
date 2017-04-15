@@ -126,3 +126,4 @@ Referensi :
 - https://tleichtle.de/projects/bonding/bonding-howto.html
 - https://bugs.freedesktop.org/show_bug.cgi?id=89811
 - https://visibilityspots.org/wireless-bond-archlinux.html
+- https://bbs.archlinux.org/viewtopic.php?pid=1392921#p1392921
