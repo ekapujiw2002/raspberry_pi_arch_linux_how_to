@@ -1,4 +1,4 @@
-#Qt Cross Compile
+# Qt Cross Compile
 
 Referensi :
 - https://s3.amazonaws.com/spuddrepo/arch/arch_instructions.html
