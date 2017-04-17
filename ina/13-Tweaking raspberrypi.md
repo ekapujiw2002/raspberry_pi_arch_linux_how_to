@@ -1,4 +1,4 @@
-#TWEAKING RASPBERRYPI
+# TWEAKING RASPBERRYPI
 1.	Ketikkan `sudo nano /boot/config.txt`
 2.	Hilangkan tanda # di depan **disable_overscan=1**
 3.	Set opsi konsol size ke :
