@@ -1,5 +1,5 @@
-#KONFIGURASI JARINGAN RASPI SECARA STATIK
-##A. Via Ethernet
+# KONFIGURASI JARINGAN RASPI SECARA STATIK
+## A. Via Ethernet
 1.	Pindah ke direktori **/etc/netctl** dengan printah : `cd /etc/netctl`
 2.	Kopi file **/etc/netctl/examples/Ethernet-static** ke folder ini dgn printah : 
     `cp examples/ethernet-static eth0`
@@ -29,7 +29,7 @@
 10.	Kini ip di raspi akan menjadi statik sesuai seting yang telah diset sebelumnya.
 11.	Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
-##B. Via Wifi
+## B. Via Wifi
 1. Buat file profil wifinya misal **/etc/netctl/wlan0** dengan konten sebagai berikut :
 	```
 	Description='Wireless connection via wlan0'
@@ -58,7 +58,7 @@
 3. Untuk kemudahan aktivasi koneksinya maka aktifkan service otomatisnya dengan `sudo systemctl enable netctl-auto@wlan0.service`
 4. Untuk systemd baru maka pastikan service **systemd-networkd.service** di-disable. Tambahkan juga opsi **ForceConnect='yes'** di file konfigurasi network yang dipergunakan.
 
-##C. SYSTEMD-NETWORKD
+## C. SYSTEMD-NETWORKD
 ArchLinux terbaru menggunakan **systemd-networkd** untuk konfigurasi jaringannya. Untuk jaringan ethernet pergunakan langkah berikut ini :
 
 1. Buat file konfigurasi misal **/etc/systemd/network/eth0.network** dengan isi sebagai berikut :
