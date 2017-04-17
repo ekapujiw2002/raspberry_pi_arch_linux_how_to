@@ -1,4 +1,4 @@
-#EKSTEND PARTISI
+# EKSTEND PARTISI
 1. Login sebagai root ke raspi dan lakukan perintah berikut ini :
 	```
 	fdisk "/dev/mmcblk0"
