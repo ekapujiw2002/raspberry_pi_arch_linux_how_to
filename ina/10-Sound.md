@@ -1,4 +1,4 @@
-#INSTALL SOUND DRIVER
+# INSTALL SOUND DRIVER
 Untuk meng-*update driver* *soundcard*-nya maka pergunakan perintah berikut ini :
 
     sudo pacman -S --needed alsa-firmware alsa-lib alsa-utils pulseaudio pulseaudio-alsa
