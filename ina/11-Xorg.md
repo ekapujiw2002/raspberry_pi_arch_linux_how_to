@@ -1,4 +1,4 @@
-#INSTALL XORG dan LXDE
+# INSTALL XORG dan LXDE
 Xorg merupakan package driver untuk graphic card. Lakukan instalasinya dengan perintah berikut ini :
  ```
  sudo pacman -S --needed xorg-server xorg-xinit xorg-utils xorg-server-utils xorg-xclock xorg-twm xterm xf86-video-fbdev
