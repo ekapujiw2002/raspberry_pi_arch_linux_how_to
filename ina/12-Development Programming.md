@@ -1,4 +1,4 @@
-#INSTALL DEVELOPMENT ENVIROMENT (C,C++,PYTHON)
+# INSTALL DEVELOPMENT ENVIROMENT (C,C++,PYTHON)
 Untuk keperluan membuat program, maka lakukan instalasi paket program sebagai berikut :
 
 ```
