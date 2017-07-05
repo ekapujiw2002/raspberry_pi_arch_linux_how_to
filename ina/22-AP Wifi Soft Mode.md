@@ -1,4 +1,4 @@
-#RASPI ACCESS POINT GUIDE
+# RASPI ACCESS POINT GUIDE
 
  - OS			: arch linux arm
  - Wifi usb adapter 	: tl-WN422G
@@ -55,7 +55,7 @@
 	macaddr_acl=0
 	auth_algs=1
 	ignore_broadcast_ssid=0
-	wpa=3
+	wpa=2
 	#wpa passhphrase length = 8..63
 	wpa_passphrase=KeePGuessinG
 	wpa_key_mgmt=WPA-PSK
