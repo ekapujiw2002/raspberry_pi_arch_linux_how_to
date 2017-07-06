@@ -122,4 +122,8 @@ Referensi:
  - https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
  - https://www.modmypi.com/blog/how-to-connect-your-raspberry-pi-to-a-3g-network
  - http://copyndone.com/2015/06/27/guide-how-to-use-raspberry-pi-with-3g-usb-stick/
+ - https://v2.blogdoch.net/2013/02/17/wusel-102516/
+ - http://garethhowell.com/wp/connect-raspberry-pi-3g-network/
+ - http://www.g7smy.co.uk/2014/08/raspberry-pi-as-a-3g4g-router/
+ 
  
