@@ -108,7 +108,15 @@ while true; do
 done
 ```
 
+Tambahkan *default* DNS dengan membuat file **/etc/resolv.conf.head** dengan isi misalnya :
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+```
+
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
  - http://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
  - https://www.codeenigma.com/community/blog/installing-3g-usb-modems-linux
+ - https://wiki.archlinux.org/index.php/resolv.conf
+ - https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
