@@ -1,4 +1,4 @@
-#3G USB MODEM
+# 3G USB MODEM
 1.	Install *usb_modeswitch, wvdial, dialog* :  `sudo pacman -S --needed usb_modeswitch wvdial dialog`
 2.	Install *wvdial* : `sudo pacman -S wvdial`
 3.	Download sakis3g dari http://sourceforge.net/projects/vim-n4n0/files/sakis3g.tar.gz/download
