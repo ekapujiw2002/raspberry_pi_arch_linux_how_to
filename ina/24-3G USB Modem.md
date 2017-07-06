@@ -108,13 +108,13 @@ while true; do
 done
 ```
 
-Tambahkan *default* DNS dengan membuat file **/etc/resolv.conf.head** dengan isi misalnya :
+17. Tambahkan *default* DNS dengan membuat file **/etc/resolv.conf.head** dengan isi misalnya :
 ```
 nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
 
-Untuk pppd versi baru maka buat symlink sebagai berikut : `sudo ln -sf /run/systemd/resolve/resolv_ppp.conf /etc/ppp/resolv.conf`
+18. Untuk pppd versi baru maka buat symlink sebagai berikut : `sudo ln -sf /run/systemd/resolve/resolv_ppp.conf /etc/ppp/resolv.conf`
 
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
