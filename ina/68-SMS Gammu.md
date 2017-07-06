@@ -7,3 +7,4 @@ Referensi :
  - http://www.mattiasnorell.com/send-sms-from-a-raspberry-pi/
  - https://garretlabs.wordpress.com/2014/05/21/raspberry-pi-a-remote-controlled-relay-using-sms-messages/ 
  - https://wammu.eu/docs/manual/config/
+ - https://blog.sleeplessbeastie.eu/2012/07/16/kalkun-how-to-setup-sms-gateway-at-home/
