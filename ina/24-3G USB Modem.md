@@ -114,6 +114,8 @@ nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
 
+Untuk pppd versi baru maka buat symlink sebagai berikut : `sudo ln -sf /run/systemd/resolve/resolv_ppp.conf /etc/ppp/resolv.conf`
+
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
  - http://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
