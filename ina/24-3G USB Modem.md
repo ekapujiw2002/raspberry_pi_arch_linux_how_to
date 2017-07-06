@@ -120,3 +120,6 @@ Referensi:
  - https://www.codeenigma.com/community/blog/installing-3g-usb-modems-linux
  - https://wiki.archlinux.org/index.php/resolv.conf
  - https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
+ - https://www.modmypi.com/blog/how-to-connect-your-raspberry-pi-to-a-3g-network
+ - http://copyndone.com/2015/06/27/guide-how-to-use-raspberry-pi-with-3g-usb-stick/
+ 
