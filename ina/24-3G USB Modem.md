@@ -116,6 +116,8 @@ nameserver 8.8.4.4
 
 18. Untuk pppd versi baru maka buat symlink sebagai berikut : `sudo ln -sf /run/systemd/resolve/resolv_ppp.conf /etc/ppp/resolv.conf`
 
+19. Jika tidak dapat me-resolve DNS maka paksa nsswitch.conf ke mode files dengan mengisi file **/etc/nsswitch.conf** dengan `files` saja.
+
 Referensi:
  - http://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/
  - http://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
