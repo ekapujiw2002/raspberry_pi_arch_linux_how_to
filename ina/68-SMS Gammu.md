@@ -29,7 +29,7 @@ device = /dev/ttyUSB0
 name = Phone on USB serial port HUAWEI_Technology HUAWEI_Mobile
 connection = at
 
-[sim900]
+[gammu1]
 device = /dev/ttyAMA0
 name = SIM900
 connection = at115200
