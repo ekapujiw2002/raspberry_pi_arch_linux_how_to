@@ -1,4 +1,4 @@
-#VIDEO LOOPER DENGAN OMXPLAYER DAN PIPING
+# VIDEO LOOPER DENGAN OMXPLAYER DAN PIPING
 1.	Install omxplayer ,unclutter, xorg-xset : `sudo pacman –S omxplayer xorg-xset unclutter`
 2.	Buat folder utk menyimpan script dan file multimedia yang akan di-play, misal di **~/video_looper**. Untuk file multimedia bisa dimasukkan misal dalam folder **~/video_looper/files**
 3.	Buat sebuah file FIFO di dalam folder **~/video_looper** untuk piping perintah ke omxplayer dengan perintah : `mkfifo [name]`, misal `mkfifo omx_fifo`
