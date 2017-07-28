@@ -106,3 +106,4 @@
  - http://aslamnajeebdeen.com/blog/how-to-fix-apache-could-not-reliably-determine-the-servers-fully-qualified-domain-name-using-127011-for-servername-error-on-ubuntu
  - https://wiki.archlinux.org/index.php/PhpMyAdmin
  - https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+ - https://tecadmin.net/change-default-mysql-data-directory-in-linux/
