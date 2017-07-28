@@ -65,11 +65,11 @@
 	grant create on *.* to raspi;
 	quit
 	```
-8. Tambahkan `skip-name-resolve` ke **/etc/my.cnf** untuk mem-*bypass* pencarian dns.
+8. Tambahkan `skip-name-resolve` ke **/etc/my.cnf atau /etc/mysql/my.cnf** untuk mem-*bypass* pencarian dns.
 9. Matikan logging mysql dengan memberikan tanda # di depan semua parameter log
 9. Restart mysql server dengan : `sudo systemctl restart mysqld`
 
-##INSTALL PHPMYADMIN
+## INSTALL PHPMYADMIN
 1. Install phpmyadmin dan php-mcrypt dengan : `sudo pacman –S phpmyadmin php-mcrypt`
 2. Konfigurasi sesuai dengan petunjuk di link https://wiki.archlinux.org/index.php/PhpMyAdmin  
 3. Jalankan perintah `sudo nano /etc/httpd/conf/extra/httpd-phpmyadmin.conf` dan isikan dengan :
