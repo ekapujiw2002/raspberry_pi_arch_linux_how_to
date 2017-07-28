@@ -62,7 +62,7 @@
 
 	```
 	create user 'raspi'@'%' identified by 'raspi';
-	grant create on *.* to raspi;
+	grant all privileges on *.* to raspi;
 	quit
 	```
 8. Tambahkan `skip-name-resolve` ke **/etc/my.cnf atau /etc/mysql/my.cnf** untuk mem-*bypass* pencarian dns.
