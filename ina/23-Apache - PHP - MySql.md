@@ -1,5 +1,5 @@
-#INSTALL APACHE, MYSQL, PHP
-##APACHE
+# INSTALL APACHE, MYSQL, PHP
+## APACHE
 1. Pastikan *repository* lokal terupdate dgn : `sudo pacman –Syu`
 2. Install *apache* : `sudo pacman -S apache`
 3. Install *lynx* : `sudo pacman –S lynx`
@@ -27,7 +27,7 @@
 
 11. Jika folder document root Apache akan diubah maka pastikan bahwa foldernya telah diset permissionnya dengan benar di file **/etc/httpd/conf/httpd.conf** dan telah di-allow untuk dibuka pada bagian konfigurasi PHP-nya di file **/etc/php/php.ini** section **open_basedir**
 
-##PHP
+## PHP
 1. Install php dengan `sudo pacman -S php php-apache php-sqlite`
 2. Edit file **/etc/httpd/conf/httpd.conf** dan tambahkan :
  ```
@@ -42,7 +42,7 @@
 7. Jika diinginkan agar script php dapat mengeksekusi command shell maka tambahkan kode berikut ke file **/etc/sudoers** : `%http ALL=(ALL) NOPASSWD: ALL`
 8. Aktifkan ekstensi **mysql.so**,**sqlite3.so**,**pdo-mysql**,**pdo-sqlite**, dan **mysqli.so** dengan menghilangkan tanda # di file **/etc/php/php.ini**
 
-##MYSQL
+## MYSQL
 1. Install mysql(pilih mariadb saja) : `sudo pacman –S mysql perl-dbd-mysql`
 2. Jalankan perintah `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql` untuk menginisialisasi database mysql. Start mysql server dengan : `sudo systemctl start mysqld`. Untuk menghidupkan server MySQL pada saat boot, maka lakukan  `sudo systemctl enable mysqld`
 3. Jika mysql server tidak dapat dijalankan, maka edit file **/etc/mysql/my.cnf** dan hilangkan tanda # di depan smua innodb. Lalu delete file **/var/lib/mysql/ibdata1**
