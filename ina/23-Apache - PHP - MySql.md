@@ -91,6 +91,45 @@
 	```
 5. Restart apache dengan `sudo systemctl restart httpd` dan buka link phpmyadmin dari browser
 
+## ENABLE CGI
+1. Untuk menjalankan sebuah program dari web maka hidupkan mod_cgi dengan mengubah file **/etc/httpd/conf/httpd.conf** :
+```
+<IfModule mpm_prefork_module>
+	LoadModule cgi_module modules/mod_cgi.so
+</IfModule>
+```
+2. Ubah folder cgi sesuai folder cgi Anda :
+```
+ScriptAlias /cgi-bin/ "/mnt/data/web/cgi-bin/"
+```
+3. Konfigurasi folder cgi di atas :
+```
+<Directory "/mnt/data/web/cgi-bin/">
+	AllowOverride None
+	Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+	Order allow,deny
+	Allow from all
+	Require all granted
+</Directory>
+```
+4. Pastikan folder cgi memiliki hak akses untuk dieksekusi :
+```
+drwxr-xr-x 2 root root 4096 Jul 29 08:22 cgi-bin
+```
+5. Buat sebuah skrip dengan bahasa apapun di folder tersebut dan set executable flag-nya. Misal dibuat sebuah skrip bash dengan nama **tt.exe** (ekstensi terserah Anda) :
+```
+#!/bin/bash
+
+function toHTML(){
+        echo "$@" | tr '\r\n' '|' | sed 's/|/<br\/>/g'
+}
+
+echo -ne "Content-type: text/html\r\n\r\n"
+toHTML "`hostnamectl`"
+```
+Satu hal yang harus diperhatikan : **KELUARKAN DATANYA SEBAGAI FORMAT HTML!!!**
+6. Akses skrip tersebut dari browser dan lihatlah hasilnya : **http://localhost/cgi-bin/tt.exe**
+
 **Reference**
  - https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-arch-linux
  - https://wiki.archlinux.org/index.php/LAMP
@@ -107,3 +146,4 @@
  - https://wiki.archlinux.org/index.php/PhpMyAdmin
  - https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
  - https://tecadmin.net/change-default-mysql-data-directory-in-linux/
+ - http://www.techrepublic.com/blog/diy-it-guy/diy-enable-cgi-on-your-apache-server/
