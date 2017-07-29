@@ -147,3 +147,4 @@ Satu hal yang harus diperhatikan : **KELUARKAN DATANYA SEBAGAI FORMAT HTML!!!**
  - https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
  - https://tecadmin.net/change-default-mysql-data-directory-in-linux/
  - http://www.techrepublic.com/blog/diy-it-guy/diy-enable-cgi-on-your-apache-server/
+ - https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite
