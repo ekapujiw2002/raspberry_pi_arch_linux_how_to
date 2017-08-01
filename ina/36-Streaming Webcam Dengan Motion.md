@@ -1,4 +1,4 @@
-#WEBCAM STREAMER DENGAN MOTION
+# WEBCAM STREAMER DENGAN MOTION
 1.	Install **motion, ffmpeg** dengan perintah	: `sudo pacman -S motion ffmpeg`
 2.	Install juga sebuah web server misal Apache sesuai dengan panduan di https://github.com/ekapujiw2002/raspberry_pi_arch_linux_how_to/blob/master/ina/23-Apache%20-%20PHP%20-%20MySql.md
 3.	Buat file html misal index.html di dalam folder **/srv/http/motion** misalnya dan isi dengan kode berikut ini. **Jika menggunakan tunneling maka sesuaikan URL-nya!!! Lihat contoh di bawah ini baik-baik.**.
