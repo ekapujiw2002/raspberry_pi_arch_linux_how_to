@@ -1,4 +1,4 @@
-#Raspicam  
+# Raspicam  
 
 1. Edit file **/boot/config.txt** dengan `sudo nano /boot/config.txt` dan tambahkan baris berikut ini :  
 
