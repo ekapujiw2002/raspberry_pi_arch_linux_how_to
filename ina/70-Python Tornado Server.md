@@ -245,7 +245,7 @@ def main_app_loop():
 		http_server.listen(SERVER_SETTING['PORT'])
 		
 		global WS_PERIODIC_JOB
-		WS_PERIODIC_JOB = tornado.ioloop.PeriodicCallback(ws_broadcast, 100)
+		WS_PERIODIC_JOB = tornado.ioloop.PeriodicCallback(ws_broadcast, 50)
 		
 		# start a daemonize task
 		start_daemon(task_alive_beats)
