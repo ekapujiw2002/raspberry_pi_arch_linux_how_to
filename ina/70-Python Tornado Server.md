@@ -309,6 +309,10 @@ if __name__ == "__main__":
 ```
 9. Server akan secara periodik per 100ms mengirimkan data ke semua websocket client yang terkoneksi ke server. Jadi ya sangat cepat
 
+<center>
+<img src="https://www.collegemagazine.com/wp-content/uploads/2011/08/67de9ec06e30d9ca9f2b16bd1d78c104_b.jpg" width="200px"/>
+</center>
+
 Referensi :
 - https://gist.github.com/sunng87/5152427
 - http://www.codestance.com/tutorials-archive/python-tornado-web-server-with-websockets-part-i-441
