@@ -1,5 +1,7 @@
 # Python Tornado Server
 
+<img src="https://i.imgur.com/d7ovs9i.jpg" width="100%" />
+
 Kali ini akan kita buat sebuah server menggunakan Python dengan library Tornado. Server ini akan memiliki fitur sebagai berikut :
 1. Menggunakan port yang dapat di-custom oleh user
 2. Dapat menggunakan koneksi SSL maupun non SSL
@@ -310,7 +312,7 @@ if __name__ == "__main__":
 9. Server akan secara periodik per 100ms mengirimkan data ke semua websocket client yang terkoneksi ke server. Jadi ya sangat cepat
 
 <center>
-<img src="https://www.collegemagazine.com/wp-content/uploads/2011/08/67de9ec06e30d9ca9f2b16bd1d78c104_b.jpg" width="200px"/>
+<img src="https://www.collegemagazine.com/wp-content/uploads/2011/08/67de9ec06e30d9ca9f2b16bd1d78c104_b.jpg" width="100%"/>
 </center>
 
 Referensi :
