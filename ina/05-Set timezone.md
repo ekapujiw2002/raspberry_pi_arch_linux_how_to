@@ -1,4 +1,4 @@
-#SET TIMEZONE
+# SET TIMEZONE
 1.	Cek timezone yang disupport dgn perintah : `ls –l /usr/share/zoneinfo`
 2.	Set ke WIB : `ln –sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime`
 3.	Untuk mengecek status waktu sistem pergunakan sistem : `timedatectl`
