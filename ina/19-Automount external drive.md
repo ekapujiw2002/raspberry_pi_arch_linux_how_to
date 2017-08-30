@@ -1,4 +1,4 @@
-#AUTOMOUNT DRIVER EKSTERNAL
+# AUTOMOUNT DRIVER EKSTERNAL
 1. Cek UUID *drive* eksternal dengan perintah : `sudo blkid –o list –c /dev/null`
 2. Buat sebuah folder untuk mounting drivenya, misal di `/media/usb0`
 3. Edit file **/etc/fstab** dan tambahkan *list* *drive* eksternalnya, semisal sbb :
