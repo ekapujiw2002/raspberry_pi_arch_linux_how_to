@@ -1,7 +1,5 @@
 # SSH Tunnelling
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6AONLg1Rolo" frameborder="0" allowfullscreen></iframe>
-
 Referensi :
 - https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/
 - https://raymii.org/s/tutorials/Autossh_persistent_tunnels.html
