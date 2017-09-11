@@ -13,3 +13,6 @@ Referensi :
 - https://www.cyberciti.biz/faq/howto-change-linux-unix-freebsd-login-shell/
 - http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
 - https://blog.dhampir.no/content/creating-persistent-ssh-tunnels-in-windows-using-autossh
+- https://blog.philippklaus.de/2013/03/start-autossh-on-system-startup-using-systemd-on-arch-linux/
+- https://blog.kylemanna.com/linux/ssh-reverse-tunnel-on-linux-with-systemd/
+- http://logan.tw/posts/2015/11/15/autossh-and-systemd-service/
