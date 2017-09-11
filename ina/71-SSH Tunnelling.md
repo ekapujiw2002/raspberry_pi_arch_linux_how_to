@@ -12,3 +12,4 @@ Referensi :
 - https://idcloudhost.com/panduan/cara-membangun-web-server-di-ubuntu/
 - https://www.cyberciti.biz/faq/howto-change-linux-unix-freebsd-login-shell/
 - http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
+- https://blog.dhampir.no/content/creating-persistent-ssh-tunnels-in-windows-using-autossh
