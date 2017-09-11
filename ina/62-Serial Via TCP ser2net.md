@@ -1,4 +1,4 @@
-#Serial via Ethernet ser2net
+# Serial via Ethernet ser2net
 
 Referensi :
 - http://lesser-evil.com/2013/04/raspberry-pi-ser2net-cheap-nm16a-serial-console-server/
