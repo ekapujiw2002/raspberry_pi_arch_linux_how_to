@@ -1,4 +1,4 @@
-#WEBCAM STREAMER DENGAN MJPG_STREAMER
+# WEBCAM STREAMER DENGAN MJPG_STREAMER
 1.	Install mjpg-streamer, libjpeg, imagemagick	: `sudo pacman -S mjpg-streamer libjpeg imagemagick`
 2.	Buat folder untuk web directory tempat mjpg_streamer sebagai root misal di **/var/www/mjpg_streamer**
 3.	Buat file html misal index.html di dalam folder tersebut dan isi dengan kode berikut ini, sesuaikan ip dan portnya :
