@@ -10,3 +10,4 @@ Referensi :
 - http://www.ab-weblog.com/en/creating-a-restricted-ssh-user-for-ssh-tunneling-only/
 - https://blog.devolutions.net/2017/04/how-to-configure-an-ssh-tunnel-on-putty.html
 - https://idcloudhost.com/panduan/cara-membangun-web-server-di-ubuntu/
+- https://www.cyberciti.biz/faq/howto-change-linux-unix-freebsd-login-shell/
