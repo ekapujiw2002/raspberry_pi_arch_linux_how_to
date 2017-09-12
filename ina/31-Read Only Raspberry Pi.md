@@ -1,4 +1,4 @@
-#OPTIMALISASI KINERJA SDCARD
+# OPTIMALISASI KINERJA SDCARD
 1.	Buat direktori berikut sebagai *tmpfs* dengan menambahkan isian berikut ke **/etc/fstab** kalau belum ada :
 	```
 	# var dir
