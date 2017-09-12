@@ -10,7 +10,7 @@
 3.	Set boot dan root dalam mode read only (ro) dan *relatime* dengan mengubah atau menambahkannya ke **/etc/fstab** :
 	```
 	/dev/mmcblk0p1  /boot   vfat    ro,relatime        0       0
-	/dev/mmcblk0p5  /       ext4    defaults,ro,relatime    0       0
+	/dev/mmcblk0p2  /       ext4    defaults,ro,relatime    0       0
 	```
 
 4.	Jika akan dilakukan perubahan ke sebuah partisi maka pergunakan perintah : `sudo mount / -o remount,rw` untuk mengubah partisi root ke mode rw
