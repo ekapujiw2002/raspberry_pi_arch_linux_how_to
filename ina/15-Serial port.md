@@ -1,4 +1,4 @@
-#SERIAL PORT
+# SERIAL PORT
 1.	Lakukan : `sudo nano /boot/cmdline.txt`
 2.	Hapus : **console=ttyAMA0,115200 kgdboc=ttyAMA0,115200**
 3.	Matikan servis **getty@ttyAMA0.service** dengan perintah `sudo systemctl disable getty@ttyAMA0.service`
@@ -10,3 +10,4 @@
 
 Referensi :
 - http://rpi900.com/tutorials/using-the-serial-port.html
+- https://spellfoundry.com/2016/05/29/configuring-gpio-serial-port-raspbian-jessie-including-pi-3/
