@@ -107,3 +107,8 @@
 	```
 9. Restart **nginx** dengan : `sudo systemctl restart nginx` dan juga **php-fpm** dengan `sudo systemctl restart php-fpm` 
 10. Silakan masukkan semua konten website ke folder **/srv/http**
+
+Referensi :
+- https://iotalot.com/2016/05/28/video-streaming-using-raspberry-pi-3-and-usb-webcam/
+- https://blog.samuelattard.com/using-nginx-as-a-proxy-for-websocket-connections/
+- https://serverfault.com/questions/363159/nginx-proxy-pass-redirects-ignore-port
