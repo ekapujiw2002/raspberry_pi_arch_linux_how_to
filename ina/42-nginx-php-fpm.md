@@ -1,4 +1,4 @@
-#Web server nginx
+# Web server nginx
 1. Install nginx dan php-fpm dengan perintah : `sudo pacman -S --needed nginx php-fpm` . Untuk instalasi **php** dan **mysql** dapat dilihat pada **http://www.github.com/ekapujiw2002/raspberry_pi_arch_linux_how_to/ina/23-Apache%20-%20PHP%20-%20MySql.md**
 2. Jalankan nginx dengan perintah : `sudo systemctl start nginx` . Lalu jalankan php-fpm dengan perintah : `sudo systemctl start php-fpm`
 3. Buka link **http://192.168.1.250** pada browser dan akan ditampilkan halaman awal nginx.
