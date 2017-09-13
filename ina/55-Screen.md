@@ -128,3 +128,6 @@ multiuser on
 bindkey -k F1 prev
 bindkey -k F2 next
 ```
+
+Referensi :
+- https://stackoverflow.com/questions/1509677/kill-detached-screen-session
