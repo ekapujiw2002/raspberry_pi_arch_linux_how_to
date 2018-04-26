@@ -26,7 +26,7 @@
 
 5. Run webcam_stream.sh dari konsol.
 6. Buka ip dan port tersebut dari browser Anda. Selamat menikmati streaming webcam Anda.
-7. Untuk men-*capture* ke file gambar maka pergunakan perintah `wget http://127.0.0.1:8090/?action=snapshot -q -O snapshot-``date +%F-%H%M%S``.jpg`
+7. Untuk men-*capture* ke file gambar maka pergunakan perintah ```wget http://127.0.0.1:8090/?action=snapshot -q -O snapshot-`date +%F-%H%M%S`.jpg```
 
 Referensi:
  - http://www.linuxcircle.com/2013/02/06/faster-video-streaming-on-raspberry-media-server-with-mjpg-streamer/
