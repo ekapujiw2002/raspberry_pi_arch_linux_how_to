@@ -1,4 +1,4 @@
-#GMAIL SENDER
+# GMAIL SENDER
 1.	Install *python2, python2-pip, python2-setuptools, python2-gdata* : `sudo pacman –S python2 python2-pip python2-setuptools python2-gdata `
 2.	Install gdata python dengan : `sudo pip2 install gdata`
 3.	Install python-magic : `sudo pip2 install python-magic`
