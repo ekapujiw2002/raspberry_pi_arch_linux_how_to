@@ -1,4 +1,4 @@
-#SMTP Relay Server
+# SMTP Relay Server
 1. Install paket **ssmtp** dengan `sudo pacman -S --needed ssmtp`
 2. Edit file konfigurasinya di **/etc/ssmtp/ssmtp.conf** dan isi sesuai seting server SMTP yang akan dipergunakan. Untuk contoh ini maka dipergunakan server GMail dengan username xxx dan password 1234 :
   ```
