@@ -25,6 +25,7 @@ Dan cam2.conf sbb :
 	videodevice /dev/video1
 	webcam_port 8091
 	```
+	
 5. Ubah konfigurasi dari motion dengan mengedit file /etc/motion/motion.conf. Beberapa item yang perlu disesuaikan yaitu :
 > **framerate** : Menentukan kecepatan capture dari kamera. Semakin besar, maka semakin cepat hasil capture-nya dan semakin smooth frame yang ditampilkan. Untuk hasil optimal, set ke 100.  
 > **v4l2_palette** : Pilih sesuai mode gambar yang didukung kamera Anda. Umumnya semua kamera mendukung mode YUYV atau nomor 6.  
