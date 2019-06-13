@@ -15,12 +15,12 @@
 	```
 	sudo mjpg_streamer -i "/usr/lib/input_uvc.so -d /dev/video0  -r 320x240 -f 30 -y" -o "/usr/lib/output_http.so -p 8090 -w /var/www/mjpg_streamer"
 	```
-	Untuk membuat agar mjpg_streamer jalan di background, maka tambahkan ` > /dev/null 2&>1 &` di belakang kode di atas.  
-	keterangan :
+	Untuk membuat agar mjpg_streamer jalan di background, maka tambahkan ` > /dev/null 2&>1 &` di belakang kode di atas. Perintah di atas juga bisa dijalankan dulu di konsol untuk pengujian.
+	Keterangan :
 	- d : device videonya
 	- r : resolusinya
 	- f : fps yang diinginkan
-	- y : paksa kamera ke mode YUV
+	- y : paksa kamera ke mode YUV. **Hilangkan opsi ini jika kamera support mode MJPG. Mode MJPG kamera akan membuat CPU Rasperry Pi bekerja lebih ringan.**
 	- p : port yang dipakai untuk streaming
 	- w : folder web server mjpg_streamer
 
