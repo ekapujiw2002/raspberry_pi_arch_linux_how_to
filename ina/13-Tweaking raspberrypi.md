@@ -1,6 +1,6 @@
 # TWEAKING RASPBERRYPI
 1.	Ketikkan `sudo nano /boot/config.txt`
-2.	Hilangkan tanda # di depan **disable_overscan=1**
+2.	Hilangkan tanda # di depan **disable_overscan=1** kalau ada
 3.	Set opsi konsol size ke :
  ```
  framebuffer_width=1024
@@ -26,6 +26,106 @@
 
 10.	Hilangkan rainbow splash :
  `disable_splash=1`
+ 
+Isi dari file **/boot/config.txt** akan menjadi kurang lebih sebagai berikut :
+
+```
+# See /boot/overlays/README for all available options
+
+#gpu_mem=256
+#initramfs initramfs-linux.img followkernel
+#dtparam=audio=on
+#audio_pwm_mode=2
+#disable_overscan=1
+#hdmi_drive=2
+#hdmi_group=2
+#hdmi_mode=16
+#arm_freq=1000
+#disable_splash=1
+
+# See /boot/overlays/README for all available options
+
+# gpu memory
+gpu_mem=64
+
+# kernel command
+initramfs initramfs-linux.img followkernel
+
+# watchdog on
+dtparam=watchdog=on
+
+# i2c on
+dtparam=i2c_arm=on
+
+#rtc device tree
+dtoverlay=i2c-rtc,ds3231
+
+# audio
+dtparam=audio=on
+
+# avoid white noise on analog jack
+disable_audio_dither=1
+
+# analog tv mode (0=NTS, 1=JAPAN NTSC, 2=PAL, 3=BRAZIL)
+#sdtv_mode=2
+
+# disable overscan
+disable_overscan=1
+
+# force console size
+framebuffer_width=1280
+framebuffer_height=720
+
+# make sure hdmi always on
+hdmi_force_hotplug=1
+
+# hdmi audio caveat
+hdmi_drive=2
+
+# dmt hdmi mode
+hdmi_group=2
+hdmi_mode=85
+
+# cea mode
+#hdmi_group=1
+#hdmi_mode=16
+
+# analog audio caveat
+audio_pwm_mode=2
+
+# overclock
+##Medium
+arm_freq=800
+arm_freq_min=800
+#core_freq=333
+#sdram_freq=450
+
+# always high cpu freq
+#force_turbo=1
+
+# disable splash
+disable_splash=1
+
+# set max usb current out to 12000mA
+max_usb_current=1
+
+# raspicam
+#start_file=start_x.elf
+#fixup_file=fixup_x.dat
+#disable_camera_led=1
+
+# make sure uart0 on
+dtparam=uart0=on
+
+# disable bluetooth serial port and /dev/ttyAMA0 back to GPIO
+dtoverlay=pi3-disable-bt
+
+# bluetooth uart use mini serial /dev/ttyS0
+#dtoverlay=pi3-miniuart-bt
+
+# boot delay, untuk menghandle sdcard yang lemot
+boot_delay=5
+```
 
 11. Tambahkan beberapa alias perintah berikut di file **.bashrc** untuk kemudahan perintah :
  ```
