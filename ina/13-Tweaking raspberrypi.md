@@ -32,21 +32,8 @@ Isi dari file **/boot/config.txt** akan menjadi kurang lebih sebagai berikut :
 ```
 # See /boot/overlays/README for all available options
 
-#gpu_mem=256
-#initramfs initramfs-linux.img followkernel
-#dtparam=audio=on
-#audio_pwm_mode=2
-#disable_overscan=1
-#hdmi_drive=2
-#hdmi_group=2
-#hdmi_mode=16
-#arm_freq=1000
-#disable_splash=1
-
-# See /boot/overlays/README for all available options
-
 # gpu memory
-gpu_mem=64
+gpu_mem=192
 
 # kernel command
 initramfs initramfs-linux.img followkernel
