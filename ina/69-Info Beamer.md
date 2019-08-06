@@ -139,6 +139,7 @@ Info Beamer merupakan sebuah program kecil untuk menampilkan berbagai *resource*
  5. Set flag executable pada file info-beamer jika belum aktif dengan `chmod +x info-beamer` . Setelah itu kopi ke **/usr/bin** dengan `sudo cp info-beamer /usr/bin`
  6. Teslah info-beamer Anda dengan mengetikkan perintah ini `sudo info-beamer samples/shader` dan lihatlah hasilnya ke layar Anda.
  7. Jika eror atau kurang optimal maka silakan ubah beberapa opsi ini untuk Raspberry Pi Anda dengan mengedit **/boot/config.txt** dan tambahkan **gpu_mem=192** serta **dtoverlay=vc4-kms-v3d**
+ 8. Run dengan `sudo INFOBEAMER_ADDR=0.0.0.0 INFOBEAMER_AUDIO_TARGET=hdmi INFOBEAMER_LOG_LEVEL=3 info-beamer path_folder_node_lua`
  
  Selebihnya bisa dieksplorasi lebih lanjut pada link di bawah ini.
 
