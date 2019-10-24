@@ -1,4 +1,4 @@
-#YAOURT
+# YAOURT
 
 1. Install 'base-devel' dan 'yajl' kalau belum dengan : `sudo pacman -S --needed base-devel yajl`
 2. Buat folder untuk download dan kompile paket dari AUR misal di '/tmp/AUR' dengan : `mkdir -p ~/temp/AUR/ && cd ~/temp/AUR/`
