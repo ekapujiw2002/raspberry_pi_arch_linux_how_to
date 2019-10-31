@@ -1,4 +1,4 @@
-#KIOSK WEB BROWSER
+# KIOSK WEB BROWSER
 1.	Download kweb dari http://steinerdatenbank.de/software/kweb-1.6.3.tar.gz
 2.	Extrak filenya dengan : `tar –xvf kweb-1.6.3.tar.gz`. Lalu ekstrak file **kweb_1.6.3-1_armhf.deb** dengan perintah `ar -vx kweb_1.6.3-1_armhf.deb` diikuti dengan `tar -xvzf data.tar.gz`. Kita hanya membutuhkan file **usr/bin/kweb** dan **usr/bin/kweb3**
 3.	Install webkitgtk : `sudo pacman –S webkitgtk`
