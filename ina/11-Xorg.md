@@ -15,6 +15,22 @@ Selanjutnya install **LXDE** sebagai engine untuk desktopnya dengan langkah beri
 8.	Untuk menghindari pesan bahwa user konsol yang bisa melakukan startx, maka ketikkan perintah ini : `echo "allowed_users=anybody" > sudo tee -a /etc/X11/Xwrapper.config`
 9.	Untuk menjalankan X secara silent maka pergunakan perintah : `startx > /dev/null 2>&1 &`
 10.	Untuk menjalankan X pada mode *read only* maka tambahkan kode berikut di file **.bash_profile** : `export XAUTHORITY=/tmp/.Xauthority`
+11. Untuk manjalankan XServer otomatis ketika login maka edit file **.bash_profile** sebagai berikut dan kombinasikan dengan autologin :
+```
+export XAUTHORITY=/tmp/.Xauthority
+
+#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  #exec startx
+  #startx
+  echo "X started"
+else
+  echo "X not started"
+  echo $DISPLAY $XDG_VTNR
+fi
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+```
 
 Referensi :
 - http://karuppuswamy.com/wordpress/2010/09/26/how-to-fix-x-user-not-authorized-to-run-the-x-server-aborting/
