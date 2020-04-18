@@ -21,7 +21,7 @@ export XAUTHORITY=/tmp/.Xauthority
 
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  #exec startx
+  exec startx
   #startx
   echo "X started"
 else
