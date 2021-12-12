@@ -57,6 +57,11 @@ Di atas merupakan kondisi di mana **eth0** *down* tapi sistem masih bisa terkone
   [NetDev]
   Name=bond0
   Kind=bond
+
+  [Bond]
+  Mode=active-backup
+  PrimaryReselectPolicy=always
+  MIIMonitorSec=1s
   ```
 4. Buat file **bond master** sebagai **/etc/systemd/network/50-bonding-master.network** dengan isian sebagai berikut :
   ```
@@ -77,6 +82,7 @@ Di atas merupakan kondisi di mana **eth0** *down* tapi sistem masih bisa terkone
 
   [Network]
   Bond=bond0
+  PrimarySlave=true
   ```
 6. Buat file **bond slave** sebagai **/etc/systemd/network/50-bonding-slave.network** dengan isian sebagai berikut :
   ```
@@ -127,3 +133,4 @@ Referensi :
 - https://bugs.freedesktop.org/show_bug.cgi?id=89811
 - https://visibilityspots.org/wireless-bond-archlinux.html
 - https://bbs.archlinux.org/viewtopic.php?pid=1392921#p1392921
+- https://wiki.archlinux.org/title/systemd-networkd#Bonding_a_wired_and_wireless_interface 
